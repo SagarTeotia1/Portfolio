@@ -8,7 +8,6 @@ import Awards from './components/Awards';
 import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 
-
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
@@ -18,21 +17,25 @@ export default function App() {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
       {/* Main Layout */}
-      <div className="flex flex-col md:flex-row px-6 md:px-12 py-8 gap-8 mt-20">
-        {/* Sticky Left Profile Card */}
-        <ProfileCard />
+      <main className="px-6 md:px-16 lg:px-24 xl:px-32 pt-24 pb-12 max-w-screen-xl mx-auto space-y-20">
+        {/* Responsive Wrapper */}
+        <div className="flex flex-col md:flex-row gap-10">
+          {/* Profile Card */}
+          <div className="md:w-1/3 w-full">
+            <ProfileCard />
+          </div>
 
-        {/* Right Main Content */}
-        <main className="flex-1 space-y-16">
-          <HeroSection />
-          <Projects />
-          <Experience />
-          <Awards />
-          <TechStack />
-          <Contact />
-        </main>
-      </div>
+          {/* Main Content */}
+          <div className="md:w-2/3 w-full space-y-20">
+            <HeroSection />
+            <Projects />
+            <Experience />
+            <Awards />
+            <TechStack />
+            <Contact />
+          </div>
+        </div>
+      </main>
     </div>
   );
 }
-

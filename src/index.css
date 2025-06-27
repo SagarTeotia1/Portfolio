@@ -31,10 +31,28 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+body {
+  background-color: #ffffff;
+  color: #000000;
+  transition-property: background-color, color;
+  transition-duration: 300ms;
 }
+/* Set background and text color based on color scheme */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #000000;
+    color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+
 
 button {
   border-radius: 8px;

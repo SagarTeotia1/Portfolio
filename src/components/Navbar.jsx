@@ -1,28 +1,50 @@
 import React from 'react';
+import { Home, Folder, Briefcase, Wrench, Pen, Sun, Moon } from 'lucide-react';
 
 export default function Navbar({ darkMode, setDarkMode }) {
   return (
-    <header className="center w-full fixed top-0 z-50 px-6 py-4 bg-black/70 dark:bg-black/70 backdrop-blur-md rounded-b-xl flex justify-between items-center shadow-lg">
-      {/* Brand Name */}
-    
+    <>
+      {/* Floating Centered Navbar */}
+      <div
+        className={`fixed top-6 left-1/2 transform -translate-x-1/2 z-40 px-6 py-3 rounded-full shadow-lg flex gap-6 items-center
+        ${darkMode ? 'bg-[#181818] text-white' : 'bg-white text-black border border-gray-200'}`}
+      >
+        {/* Navigation Links */}
+        <a href="#home" title="Home">
+          <Home className="w-5 h-5 hover:scale-110 transition text-orange-500" />
+        </a>
+        <a href="#projects" title="Projects">
+          <Folder className="w-5 h-5 hover:scale-110 transition text-orange-500" />
+        </a>
+        <a href="#experience" title="Experience">
+          <Briefcase className="w-5 h-5 hover:scale-110 transition text-orange-500" />
+        </a>
+        <a href="#techstack" title="Tech Stack">
+          <Wrench className="w-5 h-5 hover:scale-110 transition text-orange-500" />
+        </a>
+        <a href="#contact" title="Contact">
+          <Pen className="w-5 h-5 hover:scale-110 transition text-orange-500" />
+        </a>
+      </div>
 
-      {/* Navigation Links */}
-      <nav className="hidden md:flex gap-6 text-sm font-medium text-white">
-        <a href="#home" className="hover:underline underline-offset-4">Home</a>
-        <a href="#projects" className="hover:underline underline-offset-4">Projects</a>
-        <a href="#experience" className="hover:underline underline-offset-4">Experience</a>
-        <a href="#techstack" className="hover:underline underline-offset-4">Tech Stack</a>
-        <a href="#contact" className="hover:underline underline-offset-4">Contact</a>
-      </nav>
-
-      {/* Dark Mode Toggle */}
+      {/* Dark Mode Toggle Button */}
       <button
         onClick={() => setDarkMode(!darkMode)}
-        className="ml-auto md:ml-0 text-white bg-gray-200 dark:bg-gray-800 dark:text-white px-3 py-1 rounded-full transition"
         title="Toggle Theme"
+        className={`fixed bottom-6 right-6 z-50 p-2 rounded-full shadow-md hover:scale-110 transition
+        ${darkMode ? 'bg-gray-800' : 'bg-gray-200'}`}
       >
-        {darkMode ? '☀️' : '🌙'}
+        <div
+          className={`w-8 h-8 flex items-center justify-center rounded-full 
+          ${darkMode ? 'bg-gray-700 text-white' : 'bg-gray-300 text-black'}`}
+        >
+          {darkMode ? (
+            <Sun className="w-4 h-4 text-orange-500" />
+          ) : (
+            <Moon className="w-4 h-4 text-orange-500" />
+          )}
+        </div>
       </button>
-    </header>
+    </>
   );
 }
