@@ -1,35 +1,38 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useState } from 'react';
+import Navbar from './components/NavBar';
+import ProfileCard from './components/ProfileCard';
+import HeroSection from './components/HeroSection';
+import Projects from './components/Projects';
+import Experience from './components/Experience';
+import Awards from './components/Awards';
+import TechStack from './components/TechStack';
+import Contact from './components/Contact';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+export default function App() {
+  const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <>
-      <div className=''>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div className={darkMode ? 'dark bg-black text-white min-h-screen' : 'bg-white text-black min-h-screen'}>
+      {/* Navigation Bar */}
+      <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
+
+      {/* Main Layout */}
+      <div className="flex flex-col md:flex-row px-6 md:px-12 py-8 gap-8 mt-20">
+        {/* Sticky Left Profile Card */}
+        <ProfileCard />
+
+        {/* Right Main Content */}
+        <main className="flex-1 space-y-16">
+          <HeroSection />
+          <Projects />
+          <Experience />
+          <Awards />
+          <TechStack />
+          <Contact />
+        </main>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card" style={{ backgroundColor: 'lightblue', padding: '20px', borderRadius: '10px' }}>
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
