@@ -7,7 +7,7 @@ export default function HeroSection() {
       className="mt-10 px-4 md:px-5 text-left"
     >
       {/* Title */}
-      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-black dark:text-white">
+      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-black dark:text-white text">
         SOFTWARE
         <br />
         <span className="text-gray-500 dark:text-gray-400">ENGINEER</span>

@@ -14,7 +14,7 @@ export default function Navbar({ darkMode, setActiveSection }) {
     { href: '#projects', icon: Folder, label: 'Projects' },
     { href: '#experience', icon: Briefcase, label: 'Experience' },
     // { href: '#techstack', icon: Wrench, label: 'Tech Stack' },
-    { href: '#awards', icon: Award, label: 'Awards' },
+    // { href: '#awards', icon: Award, label: 'Awards' },
     { href: '#contact', icon: Pen, label: 'Contact' },
   ];
 
@@ -41,8 +41,8 @@ export default function Navbar({ darkMode, setActiveSection }) {
           onClick={(e) => handleSmoothScroll(e, href, label)}
           className="relative group flex flex-col items-center"
         >
-          <Icon className="w-5 h-5 text-orange-500 group-hover:scale-110 transition" />
-          <span className="absolute top-7 text-xs opacity-0 group-hover:opacity-100 transition-opacity text-orange-500 whitespace-nowrap">
+          <Icon className="w-6 h-6 text-white group-hover:scale-110 transition" />
+          <span className="absolute top-8 text-xs opacity-0 group-hover:opacity-100 transition-opacity text-white whitespace-nowrap">
             {label}
           </span>
         </a>

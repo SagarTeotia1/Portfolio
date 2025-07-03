@@ -41,7 +41,7 @@ export default function AwardsScroller() {
   useEffect(() => {
     const interval = setInterval(() => {
       scrollNext();
-    }, 5000); // ⏱️ 5 seconds
+    }, 5000);
     return () => clearInterval(interval);
   }, []);
 
@@ -49,9 +49,7 @@ export default function AwardsScroller() {
 
   return (
     <section id="awards" className="mt-16">
-      <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-white dark:text-white text-center">
-        Awards & Recognition
-      </h2>
+
 
       <div className="relative w-full flex justify-center items-center px-4 sm:px-8">
         <button
@@ -65,7 +63,7 @@ export default function AwardsScroller() {
           className="w-full max-w-[90vw] sm:max-w-[600px] h-[300px] sm:h-[340px] bg-cover bg-center rounded-xl overflow-hidden shadow-lg border border-gray-700 transition-all duration-700"
           style={{ backgroundImage: `url(${award.bg})` }}
         >
-          <div className="bg-black/60 p-5 h-full flex flex-col justify-end">
+          <div className="bg-black/60 p-5 h-full flex flex-col justify-end items-center text-center">
             <div className="text-5xl mb-2">{award.icon}</div>
             <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2">{award.title}</h3>
             <p className="text-sm sm:text-base text-gray-300 leading-snug">{award.desc}</p>

@@ -12,26 +12,31 @@ export default function App() {
   const [darkMode, setDarkMode] = useState(true);
 
   return (
-    <div className={`${darkMode ? 'dark bg-black text-white' : 'bg-white text-black'} min-h-screen transition-colors duration-300`}>
+    <div
+      className={`${
+        darkMode ? 'dark text-white' : 'text-black'
+      } min-h-screen transition-colors duration-300 ease-in-out`}
+      style={{ backgroundColor: '#1A1A1A' }} // 👈 Matte Black background
+    >
       {/* Navbar */}
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
 
       {/* Main Layout */}
-      <main className="max-w-7xl mx-auto pt-28 pb-16 px-4 sm:px-8 md:px-12 lg:px-16 space-y-20">
-        {/* Grid Layout for Profile & Content */}
-        <div className="flex flex-col lg:flex-row gap-12">
-          {/* Profile Sidebar */}
-          <aside className="lg:w-1/3 w-full">
+      <main className="max-w-screen-xl mx-auto pt-20 pb-20 px-4 sm:px-8 md:px-12 lg:px-25 space-y-24">
+
+        {/* Flex Container */}
+        <div className="flex flex-col lg:flex-row gap-10 lg:gap-10" style={{ backgroundColor: '#1A1A1A' }}>
+          {/* Sidebar: Profile Card */}
+          <aside className="lg:w-1/3 w-full py-10" style={{ backgroundColor: '#1A1A1A' }}>
             <ProfileCard />
           </aside>
 
-          {/* Main Sections */}
-          <section className="lg:w-2/3 w-full space-y-20">
+          {/* Content Section */}
+          <section className="lg:w-2/3 w-full space-y-12 mt-[-10px]" style={{ backgroundColor: '#1A1A1A' }}>
             <HeroSection />
             <Awards />
             <Projects />
             <Experience />
-           
             {/* <TechStack /> */}
             <Contact />
           </section>
