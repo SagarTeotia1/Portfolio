@@ -5,21 +5,18 @@ const sampleProjects = [
   {
     title: "MetaLearn",
     desc: "Immersive VR classroom system for experiential learning.",
-    tech: ["Unity", "WebRTC", "XR"],
     image: "/projects/metalearn.png",
     link: "#",
   },
   {
     title: "MarkitLift",
     desc: "No-code AI-powered tool to build websites, branding, and marketing materials.",
-    tech: ["React", "OpenAI", "Tailwind"],
     image: "/projects/markitlift.png",
     link: "#",
   },
   {
     title: "Clum V",
     desc: "Student-first app for printing, food orders, events & carpooling.",
-    tech: ["MERN", "Redis", "Kafka"],
     image: "/projects/clumv.png",
     link: "#",
   },
@@ -27,7 +24,7 @@ const sampleProjects = [
 
 export default function ProjectList() {
   return (
-    <div className="mt-20 text-white px-4 md:px-8 lg:px-5">
+    <section id="projects" className="mt-20 text-white px-4 md:px-8 lg:px-5 scroll-mt-24">
       {/* Heading */}
       <h2 className="text-4xl md:text-6xl font-extrabold leading-tight">
         RECENT <br />
@@ -56,16 +53,6 @@ export default function ProjectList() {
                   {proj.title}
                 </h3>
                 <p className="text-sm text-gray-400 mt-1">{proj.desc}</p>
-                <div className="flex gap-2 mt-2 flex-wrap">
-                  {proj.tech.map((tech, idx) => (
-                    <span
-                      key={idx}
-                      className="bg-orange-500 text-white text-xs px-2 py-1 rounded-full"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
               </div>
             </div>
 
@@ -81,6 +68,6 @@ export default function ProjectList() {
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 }

@@ -22,14 +22,14 @@ export default function Experience() {
       </h2>
 
       {/* Timeline Container */}
-      <div className="relative border-l border-orange-500 pl-6 sm:pl-8 space-y-12">
+      <div className="relative border-l border-orange-500/40 pl-6 sm:pl-8 space-y-12">
         {experiences.map((exp, idx) => (
           <div key={idx} className="relative group">
-            {/* Timeline Dot */}
           
-            {/* Card */}
-            <div className="bg-gradient-to-br from-gray-900 to-gray-800 p-5 sm:p-6 rounded-xl border border-gray-700 hover:border-orange-400 transition-all duration-300 shadow-md group-hover:shadow-orange-500/20">
-              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-orange-400 transition-colors">
+
+            {/* Experience Card */}
+            <div className="backdrop-blur-md bg-white/5 dark:bg-black/10 border border-gray-700 rounded-xl p-5 sm:p-6 transition-all duration-300 hover:border-orange-500 hover:shadow-orange-500/10 shadow-inner">
+              <h3 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-orange-400 transition">
                 {exp.role}
               </h3>
               <p className="text-sm text-gray-400 mb-3 italic">{exp.time}</p>
