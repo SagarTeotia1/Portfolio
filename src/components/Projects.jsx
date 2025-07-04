@@ -2,29 +2,29 @@ import React, { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const sampleProjects = [
-  {
-    title: "MetaLearn",
-    desc: "Immersive VR classroom system for experiential learning.",
+{
+    title: "LogiGreen",
+    desc: "AI-based logistics platform with eco-routing and AR packaging tools.",
     image: "/assets/Project 1.png",
-    link: "#",
+    link: "https://youtu.be/EEmv-fYzNZU?si=Wr7dGlvmv3NbalvS",
   },
   {
-    title: "MarkitLift",
-    desc: "No-code AI-powered tool to build websites, branding, and marketing materials.",
+    title: "BUDY",
+    desc: "3D AI avatar that simplifies studying and boosts productivity.",
     image: "/assets/Project 2.png",
-    link: "#",
+    link: "https://youtu.be/GvhJQdqotU0?si=TrhE88AYgvRAEgfK",
   },
   {
-    title: "Clum V",
-    desc: "Student-first app for printing, food orders, events & carpooling.",
+    title: "AccessWay",
+    desc: "AR app for seamless navigation and accessibility for all.",
     image: "/assets/Project 3.png",
-    link: "#",
+    link: "https://youtu.be/4eZ0nuKH_H0?si=_XQMpD4CfBUJ_gTW",
   },
-    {
-    title: "Clum V",
-    desc: "Student-first app for printing, food orders, events & carpooling.",
+  {
+    title: "EnviroBot",
+    desc: "AI chatbot guiding users on eco-friendly living and habits.",
     image: "/assets/Project 4.png",
-    link: "#",
+    link: "https://youtu.be/cw-wSKh8j0U?si=ixmgv_NyxyxA5cmh",
   },
 ];
 

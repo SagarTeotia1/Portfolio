@@ -2,14 +2,14 @@ import React from 'react';
 
 const experiences = [
   {
-    role: 'Founder @ XR-VERSE',
-    time: 'Jul 2023 – Present',
-    desc: `Built scalable AR/VR solutions for disaster simulation and edtech training.\nLed a team of 6, secured grants, and delivered simulation platforms to national agencies.`,
+    role: 'Project Lead @ Ministry of Home Affairs (MHA), Govt. of India',
+    time: 'Jan 2025 – Present',
+    desc: `Leading 'Project Sangrakshan'—a VR training simulator for the NDRF to prepare for CBRN disasters. Coordinating deployment, training, and real-world integration.`,
   },
   {
-    role: 'Full-Stack Developer Intern @ MetaFoundry',
-    time: 'May 2024 – Aug 2024',
-    desc: `Developed internal tools using React and FastAPI. Deployed scalable microservices,\nimplemented CI/CD pipelines, and collaborated with the design team for better UX.`,
+    role: 'Freelancer',
+    time: 'Jan 2023 – Present',
+    desc: `Delivered 20+ projects including SaaS dashboards, XR demos, and e-commerce apps. Built custom solutions for startups across India using MERN, Unity, and Firebase.`,
   },
 ];
 

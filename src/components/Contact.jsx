@@ -54,13 +54,16 @@ export default function Contact() {
       ></textarea>
       <ValidationError prefix="Message" field="message" errors={state.errors} />
 
-      <button
-        type="submit"
-        disabled={state.submitting}
-        className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2.5 rounded-full transition-all duration-300 disabled:opacity-60"
-      >
-        {state.submitting ? 'Sending...' : 'Send Message'}
-      </button>
+<button
+  type="submit"
+  disabled={state.submitting}
+  className="!bg-orange-500 text-white border border-orange-600 shadow-md font-semibold py-2.5 px-6 rounded-full transition-all duration-300 disabled:opacity-60 dark:!bg-orange-500"
+>
+  {state.submitting ? 'Sending...' : 'Send Message'}
+</button>
+
+
+
     </form>
   </div>
 </section>

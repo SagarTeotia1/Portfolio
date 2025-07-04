@@ -2,41 +2,32 @@ import React, { useState, useEffect } from 'react';
 
 const awards = [
   {
-    icon: '🏆',
-    title: 'Winner – Smart India Hackathon (SIH) 2023',
-    desc: 'Developed a defense training system recognized at national level.',
+    title: 'Bronze – World Gov Summit 2025, Dubai',
+    desc: 'Honored globally for our AR+AI solution aiding the differently-abled under the M-Gov GovTech Awards.',
     bg: '/assets/Award1.jpeg',
   },
-
   {
-    icon: '🥇',
-    title: 'Best All-Freshers Team – BitBox 4.0',
-    desc: 'Awarded at hackathon by GDSC JIIT for exceptional innovation.',
+    title: 'Winners – SIH 2023',
+    desc: 'Built a VR disaster training system for the Ministry of Home Affairs; won at SVCET Chittoor.',
     bg: '/assets/Award2.jpeg',
   },
-
   {
-    icon: '🎖️',
-    title: 'Finalist – Solve for Tomorrow Challenge 2024',
-    desc: "Selected among top entries in Samsung's prestigious tech innovation challenge.",
+    title: 'Top Idea – IDE Bootcamp 2024',
+    desc: 'XR Labs stood out for immersive metaverse solutions across EdTech and sustainability domains.',
     bg: '/assets/Award3.jpeg',
   },
-
   {
-    icon: '🚀',
-    title: '2nd Place – Startup Pitchathon @ MAIT',
-    desc: 'Recognized for impactful startup idea by Startup Sphere.',
+    title: 'Best Freshers Team – BitBox 4.0',
+    desc: 'Won for creating an innovative Metaverse EdTech platform at GDSC-JIIT’s national hackathon.',
     bg: '/assets/Award4.jpeg',
   },
-  
   {
-    icon: '🚀',
-    title: '2nd Place – Startup Pitchathon @ MAIT',
-    desc: 'Recognized for impactful startup idea by Startup Sphere.',
+    title: '2nd Place – XR-VERSE @ MAIT',
+    desc: 'Recognized at Startup Sphere Pitchathon for impactful AR/VR startup with real-world use cases.',
     bg: '/assets/Award5.jpeg',
   },
-
 ];
+
 
 export default function AwardsScroller() {
   const [current, setCurrent] = useState(0);
