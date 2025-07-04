@@ -2,27 +2,27 @@ import React, { useState, useEffect } from 'react';
 
 const awards = [
   {
-    title: 'Bronze – World Gov Summit 2025, Dubai',
+    title: 'World Gov Summit 2025, Dubai',
     desc: 'Honored globally for our AR+AI solution aiding the differently-abled under the M-Gov GovTech Awards.',
     bg: '/assets/Award1.jpeg',
   },
   {
-    title: 'Winners – SIH 2023',
+    title: 'Smart India Hackathon 2023',
     desc: 'Built a VR disaster training system for the Ministry of Home Affairs; won at SVCET Chittoor.',
     bg: '/assets/Award2.jpeg',
   },
   {
-    title: 'Top Idea – IDE Bootcamp 2024',
+    title: 'IDE Startup Bootcamp 2024',
     desc: 'XR Labs stood out for immersive metaverse solutions across EdTech and sustainability domains.',
     bg: '/assets/Award3.jpeg',
   },
   {
-    title: 'Best Freshers Team – BitBox 4.0',
+    title: 'BitBox 4.0',
     desc: 'Won for creating an innovative Metaverse EdTech platform at GDSC-JIIT’s national hackathon.',
     bg: '/assets/Award4.jpeg',
   },
   {
-    title: '2nd Place – XR-VERSE @ MAIT',
+    title: 'XR-VERSE',
     desc: 'Recognized at Startup Sphere Pitchathon for impactful AR/VR startup with real-world use cases.',
     bg: '/assets/Award5.jpeg',
   },
