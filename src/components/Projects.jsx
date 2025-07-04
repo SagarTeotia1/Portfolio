@@ -5,25 +5,25 @@ const sampleProjects = [
   {
     title: "MetaLearn",
     desc: "Immersive VR classroom system for experiential learning.",
-    image: "src/assets/Project 1.png",
+    image: "/assets/Project 1.png",
     link: "#",
   },
   {
     title: "MarkitLift",
     desc: "No-code AI-powered tool to build websites, branding, and marketing materials.",
-    image: "src/assets/Project 2.png",
+    image: "/assets/Project 2.png",
     link: "#",
   },
   {
     title: "Clum V",
     desc: "Student-first app for printing, food orders, events & carpooling.",
-    image: "src/assets/Project 3.png",
+    image: "/assets/Project 3.png",
     link: "#",
   },
     {
     title: "Clum V",
     desc: "Student-first app for printing, food orders, events & carpooling.",
-    image: "src/assets/Project 4.png",
+    image: "/assets/Project 4.png",
     link: "#",
   },
 ];

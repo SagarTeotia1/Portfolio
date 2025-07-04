@@ -14,7 +14,7 @@ export default function ProfileCard() {
         </div>
       ) : (
         <img
-          src="src/assets/image.png"
+          src="/assets/image.png"
           alt="Sagar Teotia"
           onError={() => setImgError(true)}
           className="rounded-xl w-full aspect-video object-cover mb-4 shadow-md hover:shadow-orange-300 transition-shadow duration-300 z-10 relative"

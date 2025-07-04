@@ -5,29 +5,37 @@ const awards = [
     icon: '🏆',
     title: 'Winner – Smart India Hackathon (SIH) 2023',
     desc: 'Developed a defense training system recognized at national level.',
-    bg: 'src/assets/Award1.jpeg',
+    bg: '/assets/Award1.jpeg',
   },
 
   {
     icon: '🥇',
     title: 'Best All-Freshers Team – BitBox 4.0',
     desc: 'Awarded at hackathon by GDSC JIIT for exceptional innovation.',
-    bg: 'src/assets/Award2.jpeg',
+    bg: '/assets/Award2.jpeg',
   },
-  
+
   {
     icon: '🎖️',
     title: 'Finalist – Solve for Tomorrow Challenge 2024',
     desc: "Selected among top entries in Samsung's prestigious tech innovation challenge.",
-    bg: 'src/assets/Award3.jpeg',
+    bg: '/assets/Award3.jpeg',
   },
 
   {
     icon: '🚀',
     title: '2nd Place – Startup Pitchathon @ MAIT',
     desc: 'Recognized for impactful startup idea by Startup Sphere.',
-    bg: 'src/assets/Award4.jpeg',
+    bg: '/assets/Award4.jpeg',
   },
+  
+  {
+    icon: '🚀',
+    title: '2nd Place – Startup Pitchathon @ MAIT',
+    desc: 'Recognized for impactful startup idea by Startup Sphere.',
+    bg: '/assets/Award5.jpeg',
+  },
+
 ];
 
 export default function AwardsScroller() {
