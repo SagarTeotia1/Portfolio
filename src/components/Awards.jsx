@@ -1,37 +1,38 @@
 import React, { useState, useEffect } from 'react';
 
-
-
-
 const awards = [
   {
     icon: '🏆',
     title: 'Winner – Smart India Hackathon (SIH) 2023',
     desc: 'Developed a defense training system recognized at national level.',
-    bg: 'src/assets/SAGAR TEOTIA.png',
+    bg: 'src/assets/Award1.jpeg',
   },
+
   {
     icon: '🥇',
     title: 'Best All-Freshers Team – BitBox 4.0',
     desc: 'Awarded at hackathon by GDSC JIIT for exceptional innovation.',
-    bg: 'src/assets/Award 2.jpeg',
+    bg: 'src/assets/Award2.jpeg',
   },
+  
   {
     icon: '🎖️',
     title: 'Finalist – Solve for Tomorrow Challenge 2024',
     desc: "Selected among top entries in Samsung's prestigious tech innovation challenge.",
-    bg: '/assets/award-bg-3.jpg',
+    bg: 'src/assets/Award3.jpeg',
   },
+
   {
     icon: '🚀',
     title: '2nd Place – Startup Pitchathon @ MAIT',
     desc: 'Recognized for impactful startup idea by Startup Sphere.',
-    bg: '/assets/award-bg-4.jpg',
+    bg: 'src/assets/Award4.jpeg',
   },
 ];
 
 export default function AwardsScroller() {
   const [current, setCurrent] = useState(0);
+  const [imageErrors, setImageErrors] = useState({});
 
   const scrollNext = () => {
     setCurrent((prev) => (prev + 1) % awards.length);
@@ -47,6 +48,10 @@ export default function AwardsScroller() {
     }, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  const handleImageError = (index) => {
+    setImageErrors(prev => ({ ...prev, [index]: true }));
+  };
 
   const award = awards[current];
 
@@ -68,9 +73,21 @@ export default function AwardsScroller() {
         <div
           className="w-full max-w-[90vw] sm:max-w-[600px] h-[300px] sm:h-[340px] 
             bg-cover bg-center rounded-xl overflow-hidden shadow-lg 
-            border border-gray-700 transition-all duration-700"
-          style={{ backgroundImage: `url(${award.bg})` }}
+            border border-gray-700 transition-all duration-700 relative"
+          style={{ 
+            backgroundImage: imageErrors[current] ? 'linear-gradient(135deg, #1f2937, #374151)' : `url(${award.bg})`,
+            backgroundColor: '#1f2937'
+          }}
         >
+          {/* Hidden image for error detection */}
+          <img
+            src={award.bg}
+            alt=""
+            className="hidden"
+            onError={() => handleImageError(current)}
+            onLoad={() => setImageErrors(prev => ({ ...prev, [current]: false }))}
+          />
+          
           <div className="bg-black/60 p-5 h-full flex flex-col justify-end items-center text-center">
             <div className="text-5xl mb-2">{award.icon}</div>
             <h3 className="text-xl sm:text-2xl font-semibold text-white mb-2">{award.title}</h3>

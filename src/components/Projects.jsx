@@ -1,28 +1,44 @@
-import React from "react";
+import React, { useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
 const sampleProjects = [
   {
     title: "MetaLearn",
     desc: "Immersive VR classroom system for experiential learning.",
-    image: "/projects/metalearn.png",
+    image: "src/assets/Project 1.png",
     link: "#",
   },
   {
     title: "MarkitLift",
     desc: "No-code AI-powered tool to build websites, branding, and marketing materials.",
-    image: "/projects/markitlift.png",
+    image: "src/assets/Project 2.png",
     link: "#",
   },
   {
     title: "Clum V",
     desc: "Student-first app for printing, food orders, events & carpooling.",
-    image: "/projects/clumv.png",
+    image: "src/assets/Project 3.png",
+    link: "#",
+  },
+    {
+    title: "Clum V",
+    desc: "Student-first app for printing, food orders, events & carpooling.",
+    image: "src/assets/Project 4.png",
     link: "#",
   },
 ];
 
 export default function ProjectList() {
+  const [imageErrors, setImageErrors] = useState({});
+
+  const handleImageError = (index) => {
+    setImageErrors(prev => ({ ...prev, [index]: true }));
+  };
+
+  const handleImageLoad = (index) => {
+    setImageErrors(prev => ({ ...prev, [index]: false }));
+  };
+
   return (
     <section id="projects" className="mt-20 text-white px-4 md:px-8 lg:px-5 scroll-mt-24">
       {/* Heading */}
@@ -41,11 +57,25 @@ export default function ProjectList() {
             {/* Project Info */}
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 flex-1">
               {/* Thumbnail */}
-              <img
-                src={proj.image}
-                alt={proj.title}
-                className="w-full sm:w-20 h-40 sm:h-20 rounded-xl object-cover border border-gray-700 group-hover:border-orange-500 transition"
-              />
+              <div className="w-full sm:w-20 h-40 sm:h-20 rounded-xl border border-gray-700 group-hover:border-orange-500 transition overflow-hidden relative bg-gray-800">
+                {imageErrors[i] ? (
+                  // Fallback placeholder
+                  <div className="w-full h-full flex items-center justify-center bg-gradient-to-br from-gray-700 to-gray-800 text-gray-400">
+                    <div className="text-center">
+                      <div className="text-2xl mb-1">📱</div>
+                      <div className="text-xs">Project</div>
+                    </div>
+                  </div>
+                ) : (
+                  <img
+                    src={proj.image}
+                    alt={proj.title}
+                    className="w-full h-full object-cover"
+                    onError={() => handleImageError(i)}
+                    onLoad={() => handleImageLoad(i)}
+                  />
+                )}
+              </div>
 
               {/* Text Info */}
               <div>
