@@ -22,12 +22,12 @@ export default function ProfileCard() {
       )}
 
       {/* Name */}
-      <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide mb-1 z-10 relative">
+      <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide mb-1 z-10 relative text-center">
         Sagar Teotia
       </h2>
 
       {/* Role */}
-      <p className="text-sm font-medium text-orange-600 dark:text-orange-700 mb-3 z-10 relative">
+      <p className="text-sm font-medium text-orange-600 dark:text-orange-700 mb-3 z-10 relative text-center">
         Full Stack Developer | XR Engineer
       </p>
 
