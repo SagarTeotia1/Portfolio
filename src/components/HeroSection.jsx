@@ -7,7 +7,7 @@ export default function HeroSection() {
       className="mt-10 px-4 md:px-5 text-left"
     >
       {/* Title */}
-      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-black dark:text-white text">
+      <h1 className="text-5xl md:text-7xl font-extrabold leading-tight text-white text">
         SOFTWARE
         <br />
         <span className="text-gray-500 dark:text-gray-400">ENGINEER</span>
@@ -21,22 +21,22 @@ export default function HeroSection() {
       </p>
 
       {/* Stats - Always 3 Columns */}
-<div className="w-full flex justify-center">
-  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-12 w-full max-w-4xl text-center">
-    <div>
-      <p className="text-4xl md:text-5xl font-extrabold text-black dark:text-white">+46</p>
-      <p className="text-xs md:text-sm mt-1 text-gray-500 dark:text-gray-400">
-        Projects Completed
-      </p>
-    </div>
-    <div>
-      <p className="text-4xl md:text-5xl font-extrabold text-black dark:text-white">+20</p>
-      <p className="text-xs md:text-sm mt-1 text-gray-500 dark:text-gray-400">
-        Worldwide Clients
-      </p>
-    </div>
-  </div>
-</div>
+      <div className="w-full flex justify-center">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-12 w-full max-w-4xl text-center">
+          <div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white">+46</p>
+            <p className="text-xs md:text-sm mt-1 text-gray-500 dark:text-gray-400">
+              Projects Completed
+            </p>
+          </div>
+          <div>
+            <p className="text-4xl md:text-5xl font-extrabold text-white">+20</p>
+            <p className="text-xs md:text-sm mt-1 text-gray-500 dark:text-gray-400">
+              Worldwide Clients
+            </p>
+          </div>
+        </div>
+      </div>
     </section>
   );
 }
