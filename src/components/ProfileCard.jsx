@@ -73,7 +73,7 @@ export default function ProfileCard() {
           <Github className="w-5 h-5 text-orange-600" />
         </a>
         <a
-          href="mailto:sagar1teotia@gmail.com"
+          href="mailto:team@sagarteotia.in"
           className="p-2 rounded-full bg-orange-100 hover:bg-orange-200 transition"
         >
           <Mail className="w-5 h-5 text-orange-600" />

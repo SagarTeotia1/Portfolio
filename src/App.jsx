@@ -8,6 +8,7 @@ import Experience from './components/Experience';
 import Awards from './components/Awards';
 import TechStack from './components/TechStack';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 
 export default function App() {
   const [darkMode, setDarkMode] = useState(true);
@@ -88,8 +89,11 @@ export default function App() {
             >
               <Contact />
             </motion.div>
+
+            
           </section>
         </div>
+        <Footer />
       </main>
     </div>
   );
