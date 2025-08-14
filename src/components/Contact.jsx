@@ -31,7 +31,9 @@ export default function Contact() {
             name="name"
             required
             placeholder="Your Name"
-            className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-md placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm w-full"
+            className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-md 
+                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                       text-gray-900 dark:text-gray-100 text-sm w-full"
           />
 
           <input
@@ -40,7 +42,9 @@ export default function Contact() {
             name="email"
             required
             placeholder="Your Email"
-            className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-md placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm w-full"
+            className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-md 
+                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                       text-gray-900 dark:text-gray-100 text-sm w-full"
           />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
 
@@ -50,7 +54,9 @@ export default function Contact() {
             required
             rows="5"
             placeholder="Your Message"
-            className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-md placeholder:text-gray-400 dark:placeholder:text-gray-500 text-sm w-full resize-none"
+            className="bg-white dark:bg-gray-900 border border-gray-300 dark:border-gray-700 px-4 py-3 rounded-md 
+                       placeholder:text-gray-400 dark:placeholder:text-gray-500 
+                       text-gray-900 dark:text-gray-100 text-sm w-full resize-none"
           ></textarea>
           <ValidationError prefix="Message" field="message" errors={state.errors} />
 
