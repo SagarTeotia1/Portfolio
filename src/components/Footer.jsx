@@ -1,33 +1,150 @@
 import React from 'react';
-import { Mail } from 'lucide-react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
-    <footer className="mt-32 border-t border-gray-800 bg-transparent">
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-8 md:px-12 lg:px-24 py-12">
-        {/* Main Footer Content */}
-        <div className="flex flex-col md:flex-row items-center justify-between text-center md:text-left gap-6 md:gap-0">
-
-          {/* Left Section */}
-          <div className="space-y-2">
-            <p className="text-sm text-gray-500">
-              © {currentYear} Sagar Teotia. All rights reserved.
+    <footer
+      style={{
+        background: '#1A1A1A',
+        color: '#FAF8F2',
+        padding: '64px 0 36px',
+        borderTop: '2px solid #1A1A1A',
+      }}
+    >
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
+        {/* Top row */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-start',
+            marginBottom: '48px',
+            paddingBottom: '48px',
+            borderBottom: '1px solid rgba(250,248,242,0.08)',
+            flexWrap: 'wrap',
+            gap: '40px',
+          }}
+        >
+          {/* Brand */}
+          <div>
+            <div
+              style={{
+                fontFamily: 'Space Grotesk, sans-serif',
+                fontWeight: '800',
+                fontSize: '2.2rem',
+                letterSpacing: '-0.03em',
+                marginBottom: '12px',
+                color: '#FAF8F2',
+              }}
+            >
+              ST<span style={{ color: '#C4956A' }}>.</span>
+            </div>
+            <p
+              style={{
+                fontFamily: 'Space Mono, monospace',
+                fontSize: '0.72rem',
+                color: '#8B6244',
+                fontStyle: 'italic',
+                margin: 0,
+                lineHeight: '1.6',
+                maxWidth: '260px',
+              }}
+            >
+              "I am a cage, in search of a bird."
+              <br />— Franz Kafka
             </p>
           </div>
 
-          {/* Right Section */}
-          <div className="space-y-2">
-            <h4 className="text-sm font-semibold text-gray-300">Contact</h4>
-            <a
-              href="mailto:Support@sagarteotia.in"
-              className="inline-flex items-center gap-2 text-sm text-orange-500 hover:text-orange-400 transition"
-            >
-              <Mail className="w-4 h-4" />
-              Support@sagarteotia.in
-            </a>
+          {/* Link groups */}
+          <div style={{ display: 'flex', gap: '56px', flexWrap: 'wrap' }}>
+            {[
+              {
+                label: 'Navigate',
+                links: [
+                  { name: 'About', href: '#about' },
+                  { name: 'Recognition', href: '#recognition' },
+                  { name: 'Experience', href: '#experience' },
+                  { name: 'Projects', href: '#projects' },
+                ],
+              },
+              {
+                label: 'Connect',
+                links: [
+                  { name: 'GitHub', href: 'https://github.com/sagar1teotia' },
+                  { name: 'LinkedIn', href: 'https://linkedin.com/in/sagarteotia' },
+                  { name: 'Email', href: 'mailto:team@sagarteotia.in' },
+                ],
+              },
+            ].map((group, i) => (
+              <div key={i}>
+                <div
+                  style={{
+                    fontFamily: 'Space Mono, monospace',
+                    fontSize: '0.6rem',
+                    color: '#C4956A',
+                    fontWeight: '700',
+                    letterSpacing: '0.14em',
+                    textTransform: 'uppercase',
+                    marginBottom: '14px',
+                  }}
+                >
+                  {group.label}
+                </div>
+                {group.links.map((link, j) => (
+                  <a
+                    key={j}
+                    href={link.href}
+                    target={link.href.startsWith('http') ? '_blank' : undefined}
+                    rel={link.href.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    style={{
+                      display: 'block',
+                      fontFamily: 'Space Grotesk, sans-serif',
+                      fontSize: '0.88rem',
+                      color: 'rgba(250,248,242,0.65)',
+                      marginBottom: '8px',
+                      fontWeight: '500',
+                      transition: 'color 0.15s',
+                    }}
+                    onMouseEnter={(e) => (e.currentTarget.style.color = '#FAF8F2')}
+                    onMouseLeave={(e) => (e.currentTarget.style.color = 'rgba(250,248,242,0.65)')}
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </div>
+            ))}
           </div>
+        </div>
+
+        {/* Bottom row */}
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '12px',
+          }}
+        >
+          <p
+            style={{
+              fontFamily: 'Space Mono, monospace',
+              fontSize: '0.68rem',
+              color: 'rgba(250,248,242,0.3)',
+              margin: 0,
+            }}
+          >
+            © {new Date().getFullYear()} Sagar Teotia. Still searching.
+          </p>
+          <p
+            style={{
+              fontFamily: 'Space Mono, monospace',
+              fontSize: '0.62rem',
+              color: 'rgba(250,248,242,0.2)',
+              margin: 0,
+            }}
+          >
+            Greater Noida, India · Open to SF / NYC / Anywhere
+          </p>
         </div>
       </div>
     </footer>
