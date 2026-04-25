@@ -3,23 +3,43 @@ import { motion as MotionLib } from 'framer-motion';
 
 const M = MotionLib.div;
 
-const skills = [
-  { name: 'Node.js', level: 'Advanced' },
-  { name: 'TypeScript', level: 'Advanced' },
-  { name: 'React Native', level: 'Advanced' },
-  { name: 'Python', level: 'Advanced' },
-  { name: 'Express', level: 'Advanced' },
-  { name: 'Distributed Systems', level: 'Advanced' },
-  { name: 'Microservices', level: 'Advanced' },
-  { name: 'Deep Learning', level: 'Advanced' },
-  { name: 'Google Cloud', level: 'Advanced' },
-  { name: 'PostgreSQL', level: 'Advanced' },
-  { name: 'Redis', level: 'Advanced' },
-  { name: 'Kafka', level: 'Advanced' },
-  { name: 'React', level: 'Advanced' },
-  { name: 'Next.js', level: 'Advanced' },
-  { name: 'Docker', level: 'Intermediate' },
-  { name: 'AWS', level: 'Intermediate' },
+const groups = [
+  {
+    category: 'Backend',
+    skills: [
+      { name: 'Node.js', level: 'Advanced' },
+      { name: 'Express', level: 'Advanced' },
+      { name: 'Python', level: 'Advanced' },
+      { name: 'PostgreSQL', level: 'Advanced' },
+      { name: 'Redis', level: 'Advanced' },
+      { name: 'Kafka', level: 'Advanced' },
+    ],
+  },
+  {
+    category: 'Frontend',
+    skills: [
+      { name: 'TypeScript', level: 'Advanced' },
+      { name: 'React', level: 'Advanced' },
+      { name: 'React Native', level: 'Advanced' },
+      { name: 'Next.js', level: 'Advanced' },
+    ],
+  },
+  {
+    category: 'Infrastructure',
+    skills: [
+      { name: 'Distributed Systems', level: 'Advanced' },
+      { name: 'Microservices', level: 'Advanced' },
+      { name: 'Google Cloud', level: 'Advanced' },
+      { name: 'Docker', level: 'Intermediate' },
+      { name: 'AWS', level: 'Intermediate' },
+    ],
+  },
+  {
+    category: 'AI / ML',
+    skills: [
+      { name: 'Deep Learning', level: 'Advanced' },
+    ],
+  },
 ];
 
 export default function TechStack() {
@@ -29,17 +49,23 @@ export default function TechStack() {
       style={{
         background: '#1A1A1A',
         padding: '96px 0',
+        borderTop: '2px solid #1A1A1A',
         borderBottom: '2px solid #1A1A1A',
+        position: 'relative',
+        overflow: 'hidden',
       }}
     >
-      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px' }}>
+      {/* Ghost number */}
+      <div className="section-ghost-num-light">05</div>
+
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
         {/* Header */}
         <M
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          style={{ marginBottom: '64px' }}
+          style={{ marginBottom: '72px' }}
         >
           <span
             style={{
@@ -61,7 +87,7 @@ export default function TechStack() {
               fontWeight: '800',
               fontSize: 'clamp(2.5rem, 6vw, 5rem)',
               color: '#FAF8F2',
-              letterSpacing: '-0.02em',
+              letterSpacing: '-0.025em',
               margin: '8px 0 0',
               lineHeight: '1',
             }}
@@ -72,72 +98,97 @@ export default function TechStack() {
           </h2>
         </M>
 
-        {/* Skills */}
-        <M
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          viewport={{ once: true }}
-          className="tech-grid"
+        {/* Grouped skills */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: '40px',
+            marginBottom: '72px',
+          }}
         >
-          {skills.map((skill, i) => (
+          {groups.map((group, gi) => (
             <M
-              key={i}
-              initial={{ opacity: 0, y: 10 }}
+              key={gi}
+              initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: i * 0.04 }}
+              transition={{ duration: 0.6, delay: gi * 0.1 }}
               viewport={{ once: true }}
-              whileHover={{
-                borderColor: '#C4956A',
-                backgroundColor: 'rgba(196,149,106,0.12)',
-              }}
-              style={{
-                border: `2px solid ${skill.level === 'Advanced' ? '#C4956A' : 'rgba(250,248,242,0.2)'}`,
-                padding: '12px 18px',
-                background: skill.level === 'Advanced' ? 'rgba(196,149,106,0.08)' : 'transparent',
-                cursor: 'default',
-              }}
             >
-              <span
+              <div
                 style={{
-                  display: 'block',
-                  fontFamily: 'Space Grotesk, sans-serif',
-                  fontWeight: '700',
-                  fontSize: '0.9rem',
-                  color: skill.level === 'Advanced' ? '#C4956A' : 'rgba(250,248,242,0.6)',
-                  letterSpacing: '0.03em',
-                }}
-              >
-                {skill.name}
-              </span>
-              <span
-                style={{
-                  display: 'block',
                   fontFamily: 'Space Mono, monospace',
-                  fontSize: '0.55rem',
-                  color: skill.level === 'Advanced' ? '#8B6244' : 'rgba(250,248,242,0.3)',
+                  fontSize: '0.6rem',
                   fontWeight: '700',
-                  letterSpacing: '0.12em',
+                  color: '#C4956A',
+                  letterSpacing: '0.16em',
                   textTransform: 'uppercase',
-                  marginTop: '3px',
+                  marginBottom: '16px',
+                  paddingBottom: '10px',
+                  borderBottom: '1px solid rgba(196,149,106,0.2)',
                 }}
               >
-                {skill.level}
-              </span>
+                {group.category}
+              </div>
+
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {group.skills.map((skill, si) => (
+                  <M
+                    key={si}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: gi * 0.1 + si * 0.06 }}
+                    viewport={{ once: true }}
+                    whileHover={{ x: 4 }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '9px 14px',
+                      border: `1.5px solid ${skill.level === 'Advanced' ? 'rgba(196,149,106,0.4)' : 'rgba(250,248,242,0.12)'}`,
+                      background: skill.level === 'Advanced' ? 'rgba(196,149,106,0.06)' : 'transparent',
+                      cursor: 'default',
+                      transition: 'border-color 0.15s',
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: 'Space Grotesk, sans-serif',
+                        fontWeight: '600',
+                        fontSize: '0.9rem',
+                        color: skill.level === 'Advanced' ? '#C4956A' : 'rgba(250,248,242,0.5)',
+                      }}
+                    >
+                      {skill.name}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'Space Mono, monospace',
+                        fontSize: '0.5rem',
+                        color: skill.level === 'Advanced' ? 'rgba(196,149,106,0.6)' : 'rgba(250,248,242,0.2)',
+                        fontWeight: '700',
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      {skill.level === 'Advanced' ? '●●●' : '●●○'}
+                    </span>
+                  </M>
+                ))}
+              </div>
             </M>
           ))}
-        </M>
+        </div>
 
         {/* Availability */}
         <M
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
           viewport={{ once: true }}
           style={{
-            marginTop: '64px',
             paddingTop: '48px',
-            borderTop: '1px solid rgba(250,248,242,0.08)',
+            borderTop: '1px solid rgba(250,248,242,0.06)',
             display: 'flex',
             justifyContent: 'space-between',
             alignItems: 'center',
@@ -152,7 +203,7 @@ export default function TechStack() {
                 fontWeight: '700',
                 fontSize: '1.1rem',
                 color: '#FAF8F2',
-                margin: 0,
+                margin: '0 0 6px',
               }}
             >
               Open to Remote Work
@@ -160,10 +211,10 @@ export default function TechStack() {
             <p
               style={{
                 fontFamily: 'Space Mono, monospace',
-                fontSize: '0.72rem',
+                fontSize: '0.7rem',
                 color: '#8B6244',
-                margin: '6px 0 0',
-                letterSpacing: '0.05em',
+                margin: 0,
+                letterSpacing: '0.04em',
               }}
             >
               Willing to relocate: San Francisco · New York · Anywhere in the US
@@ -181,7 +232,7 @@ export default function TechStack() {
               letterSpacing: '0.08em',
               textTransform: 'uppercase',
               border: '2px solid #C4956A',
-              boxShadow: '3px 3px 0 #C4956A',
+              boxShadow: '3px 3px 0 rgba(196,149,106,0.4)',
             }}
           >
             Let's Talk →
