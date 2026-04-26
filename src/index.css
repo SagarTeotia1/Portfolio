@@ -256,3 +256,114 @@ input, textarea {
   display: inline-block;
 }
 
+/* ── Hero layout ── */
+.hero-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+@media (min-width: 1024px) {
+  .hero-main {
+    flex-direction: row;
+  }
+}
+
+.hero-left {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 48px 32px 40px;
+  min-height: 0;
+}
+
+@media (min-width: 1024px) {
+  .hero-left {
+    padding: 56px 48px 48px;
+    border-right: 2px solid #1A1A1A;
+  }
+}
+
+.hero-stats-panel {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-top: 2px solid #1A1A1A;
+}
+
+@media (min-width: 1024px) {
+  .hero-stats-panel {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    flex-shrink: 0;
+    border-top: none;
+  }
+}
+
+.hero-stat-cell {
+  padding: 20px 24px;
+  border-bottom: 2px solid #1A1A1A;
+  border-right: 2px solid #1A1A1A;
+}
+
+@media (min-width: 1024px) {
+  .hero-stat-cell {
+    border-right: none;
+    flex: 1;
+  }
+}
+
+.hero-stat-cell:nth-child(even) {
+  border-right: none;
+}
+
+@media (min-width: 1024px) {
+  .hero-stat-cell:nth-child(even) {
+    border-right: none;
+  }
+  .hero-stat-cell:last-child {
+    border-bottom: none;
+  }
+}
+
+/* ── Bottom bar ── */
+.hero-bottom-bar {
+  border-top: 2px solid #1A1A1A;
+  padding: 13px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-shrink: 0;
+  background: #FAF8F2;
+}
+
+@media (min-width: 1024px) {
+  .hero-bottom-bar {
+    padding: 13px 48px;
+  }
+}
+
+/* ── Hero name size ── */
+.hero-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 800;
+  letter-spacing: -0.035em;
+  line-height: 0.88;
+  font-size: clamp(4.5rem, 14vw, 11.5rem);
+}
+
+@media (min-width: 1024px) {
+  .hero-name {
+    font-size: clamp(4.5rem, 9vw, 10rem);
+  }
+}
+
+@media (min-width: 1280px) {
+  .hero-name {
+    font-size: clamp(5rem, 9.5vw, 11rem);
+  }
+}
+
+
