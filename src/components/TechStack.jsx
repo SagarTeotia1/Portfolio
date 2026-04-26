@@ -1,81 +1,245 @@
 import React from 'react';
+import { motion as MotionLib } from 'framer-motion';
 
-const techStack = [
-  { name: 'React', icon: '⚛️', color: 'from-blue-400 to-blue-600' },
-  { name: 'Next.js', icon: '▲', color: 'from-gray-800 to-black' },
-  { name: 'TypeScript', icon: '🔷', color: 'from-blue-600 to-blue-800' },
-  { name: 'Tailwind', icon: '🎨', color: 'from-cyan-400 to-cyan-600' },
-  { name: 'Node.js', icon: '🟢', color: 'from-green-500 to-green-700' },
-  { name: 'Express', icon: '🚀', color: 'from-gray-600 to-gray-800' },
-  { name: 'MongoDB', icon: '🍃', color: 'from-green-600 to-green-800' },
-  { name: 'PostgreSQL', icon: '🐘', color: 'from-blue-700 to-blue-900' },
-  { name: 'Docker', icon: '🐳', color: 'from-blue-500 to-blue-700' },
-  { name: 'AWS', icon: '☁️', color: 'from-orange-500 to-orange-700' },
-  { name: 'Git', icon: '🔗', color: 'from-red-500 to-red-700' },
-  { name: 'Firebase', icon: '🔥', color: 'from-yellow-500 to-orange-500' },
-  { name: 'GraphQL', icon: '🕸️', color: 'from-pink-500 to-pink-700' },
-  { name: 'Redux', icon: '🔄', color: 'from-purple-500 to-purple-700' },
-  { name: 'Three.js', icon: '🎮', color: 'from-gray-700 to-gray-900' },
-  { name: 'Vercel', icon: '▲', color: 'from-black to-gray-800' }
+const M = MotionLib.div;
+
+const groups = [
+  {
+    category: 'Backend',
+    skills: [
+      { name: 'Node.js', level: 'Advanced' },
+      { name: 'Express', level: 'Advanced' },
+      { name: 'Python', level: 'Advanced' },
+      { name: 'PostgreSQL', level: 'Advanced' },
+      { name: 'Redis', level: 'Advanced' },
+      { name: 'Kafka', level: 'Advanced' },
+    ],
+  },
+  {
+    category: 'Frontend',
+    skills: [
+      { name: 'TypeScript', level: 'Advanced' },
+      { name: 'React', level: 'Advanced' },
+      { name: 'React Native', level: 'Advanced' },
+      { name: 'Next.js', level: 'Advanced' },
+    ],
+  },
+  {
+    category: 'Infrastructure',
+    skills: [
+      { name: 'Distributed Systems', level: 'Advanced' },
+      { name: 'Microservices', level: 'Advanced' },
+      { name: 'Google Cloud', level: 'Advanced' },
+      { name: 'Docker', level: 'Intermediate' },
+      { name: 'AWS', level: 'Intermediate' },
+    ],
+  },
+  {
+    category: 'AI / ML',
+    skills: [
+      { name: 'Deep Learning', level: 'Advanced' },
+    ],
+  },
 ];
 
-export default function TechStackStrip() {
+export default function TechStack() {
   return (
-    <section className="py-16 md:py-24 bg-gradient-to-br from-zinc-950 via-zinc-900 to-black text-white overflow-hidden">
-      {/* Header */}
-      <div className="text-center mb-14 px-4">
-        <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">Tech Stack</h2>
-        <p className="text-sm sm:text-base md:text-lg text-gray-400 max-w-2xl mx-auto">
-          Tools & technologies I use to build performant and elegant digital products.
-        </p>
-      </div>
+    <section
+      id="stack"
+      className="section-mobile"
+      style={{
+        background: '#1A1A1A',
+        padding: '96px 0',
+        borderTop: '2px solid #1A1A1A',
+        borderBottom: '2px solid #1A1A1A',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Ghost number */}
+      <div className="section-ghost-num-light">05</div>
 
-      {/* Strip Rows */}
-      {[false, true].map((reverse, i) => (
-        <div key={i} className="relative mb-10">
-          <div className={`flex gap-4 md:gap-8 ${reverse ? 'animate-scroll-right' : 'animate-scroll-left'}`}>
-            {[...(reverse ? techStack.slice().reverse() : techStack), ...(reverse ? techStack.slice().reverse() : techStack)].map((tech, index) => (
-              <div key={`${tech.name}-${index}`} className="flex-shrink-0 group relative">
-                <div className="relative w-16 h-16 sm:w-20 sm:h-20 md:w-28 md:h-28 bg-white/5 backdrop-blur rounded-2xl flex items-center justify-center border border-white/10 hover:border-white/20 hover:scale-105 transition-all duration-300">
-                  <span className="text-xl sm:text-2xl md:text-3xl group-hover:scale-125 transition-transform duration-300">
-                    {tech.icon}
-                  </span>
-                  <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${tech.color} opacity-0 group-hover:opacity-20 transition-opacity duration-300`} />
-                </div>
-                <div className="absolute -bottom-7 left-1/2 transform -translate-x-1/2 bg-black/80 text-white px-2 py-1 text-xs sm:text-sm rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 hidden sm:block">
-                  {tech.name}
-                </div>
+      <div style={{ maxWidth: '1280px', margin: '0 auto', padding: '0 24px', position: 'relative', zIndex: 1 }}>
+        {/* Header */}
+        <M
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          style={{ marginBottom: '72px' }}
+        >
+          <span
+            style={{
+              fontFamily: 'Space Mono, monospace',
+              fontSize: '0.72rem',
+              fontWeight: '700',
+              letterSpacing: '0.15em',
+              textTransform: 'uppercase',
+              color: '#C4956A',
+              display: 'block',
+              marginBottom: '4px',
+            }}
+          >
+            05 / Stack
+          </span>
+          <h2
+            style={{
+              fontFamily: 'Space Grotesk, sans-serif',
+              fontWeight: '800',
+              fontSize: 'clamp(2.5rem, 6vw, 5rem)',
+              color: '#FAF8F2',
+              letterSpacing: '-0.025em',
+              margin: '8px 0 0',
+              lineHeight: '1',
+            }}
+          >
+            TOOLS OF
+            <br />
+            <span style={{ color: '#C4956A' }}>THE TRADE</span>
+          </h2>
+        </M>
+
+        {/* Grouped skills */}
+        <div
+          style={{
+            display: 'grid',
+            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+            gap: '40px',
+            marginBottom: '72px',
+          }}
+        >
+          {groups.map((group, gi) => (
+            <M
+              key={gi}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: gi * 0.1 }}
+              viewport={{ once: true }}
+            >
+              <div
+                style={{
+                  fontFamily: 'Space Mono, monospace',
+                  fontSize: '0.6rem',
+                  fontWeight: '700',
+                  color: '#C4956A',
+                  letterSpacing: '0.16em',
+                  textTransform: 'uppercase',
+                  marginBottom: '16px',
+                  paddingBottom: '10px',
+                  borderBottom: '1px solid rgba(196,149,106,0.2)',
+                }}
+              >
+                {group.category}
               </div>
-            ))}
-          </div>
 
-          {/* Fade edges */}
-          <div className="absolute top-0 left-0 w-10 sm:w-16 md:w-24 h-full bg-gradient-to-r from-black to-transparent pointer-events-none" />
-          <div className="absolute top-0 right-0 w-10 sm:w-16 md:w-24 h-full bg-gradient-to-l from-black to-transparent pointer-events-none" />
+              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+                {group.skills.map((skill, si) => (
+                  <M
+                    key={si}
+                    initial={{ opacity: 0, x: -10 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.4, delay: gi * 0.1 + si * 0.06 }}
+                    viewport={{ once: true }}
+                    whileHover={{ x: 4 }}
+                    style={{
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'space-between',
+                      padding: '9px 14px',
+                      border: `1.5px solid ${skill.level === 'Advanced' ? 'rgba(196,149,106,0.4)' : 'rgba(250,248,242,0.12)'}`,
+                      background: skill.level === 'Advanced' ? 'rgba(196,149,106,0.06)' : 'transparent',
+                      cursor: 'default',
+                      transition: 'border-color 0.15s',
+                    }}
+                  >
+                    <span
+                      style={{
+                        fontFamily: 'Space Grotesk, sans-serif',
+                        fontWeight: '600',
+                        fontSize: '0.9rem',
+                        color: skill.level === 'Advanced' ? '#C4956A' : 'rgba(250,248,242,0.5)',
+                      }}
+                    >
+                      {skill.name}
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: 'Space Mono, monospace',
+                        fontSize: '0.5rem',
+                        color: skill.level === 'Advanced' ? 'rgba(196,149,106,0.6)' : 'rgba(250,248,242,0.2)',
+                        fontWeight: '700',
+                        letterSpacing: '0.1em',
+                        textTransform: 'uppercase',
+                      }}
+                    >
+                      {skill.level === 'Advanced' ? '●●●' : '●●○'}
+                    </span>
+                  </M>
+                ))}
+              </div>
+            </M>
+          ))}
         </div>
-      ))}
 
-      {/* Animations */}
-      <style jsx>{`
-        @keyframes scroll-left {
-          0% { transform: translateX(0); }
-          100% { transform: translateX(-50%); }
-        }
-        @keyframes scroll-right {
-          0% { transform: translateX(-50%); }
-          100% { transform: translateX(0); }
-        }
-        .animate-scroll-left {
-          animation: scroll-left 35s linear infinite;
-        }
-        .animate-scroll-right {
-          animation: scroll-right 35s linear infinite;
-        }
-        .animate-scroll-left:hover,
-        .animate-scroll-right:hover {
-          animation-play-state: paused;
-        }
-      `}</style>
+        {/* Availability */}
+        <M
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+          viewport={{ once: true }}
+          style={{
+            paddingTop: '48px',
+            borderTop: '1px solid rgba(250,248,242,0.06)',
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'center',
+            flexWrap: 'wrap',
+            gap: '24px',
+          }}
+        >
+          <div>
+            <p
+              style={{
+                fontFamily: 'Space Grotesk, sans-serif',
+                fontWeight: '700',
+                fontSize: '1.1rem',
+                color: '#FAF8F2',
+                margin: '0 0 6px',
+              }}
+            >
+              Open to Remote Work
+            </p>
+            <p
+              style={{
+                fontFamily: 'Space Mono, monospace',
+                fontSize: '0.7rem',
+                color: '#8B6244',
+                margin: 0,
+                letterSpacing: '0.04em',
+              }}
+            >
+              Willing to relocate: San Francisco · New York · Anywhere in the US
+            </p>
+          </div>
+          <a
+            href="mailto:team@sagarteotia.in"
+            className="brutal-btn"
+            style={{
+              background: '#C4956A',
+              color: '#1A1A1A',
+              padding: '12px 28px',
+              fontWeight: '700',
+              fontSize: '0.82rem',
+              letterSpacing: '0.08em',
+              textTransform: 'uppercase',
+              border: '2px solid #C4956A',
+              boxShadow: '3px 3px 0 rgba(196,149,106,0.4)',
+            }}
+          >
+            Let's Talk →
+          </a>
+        </M>
+      </div>
     </section>
   );
 }
