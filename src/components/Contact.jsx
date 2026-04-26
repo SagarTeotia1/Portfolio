@@ -8,6 +8,7 @@ export default function Contact() {
   return (
     <section
       id="contact"
+      className="section-mobile"
       style={{
         background: '#FAF8F2',
         padding: '96px 0',

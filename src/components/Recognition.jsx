@@ -82,6 +82,7 @@ export default function Recognition() {
   return (
     <section
       id="recognition"
+      className="section-mobile"
       style={{
         background: '#FAF8F2',
         padding: '96px 0',
@@ -176,10 +177,9 @@ export default function Recognition() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
-          className="project-featured"
+          className="project-featured featured-pad"
           style={{
             background: '#1A1A1A',
-            padding: '40px',
             marginBottom: '16px',
             display: 'flex',
             flexDirection: 'column',

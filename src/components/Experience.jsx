@@ -58,6 +58,7 @@ export default function Experience() {
   return (
     <section
       id="experience"
+      className="section-mobile"
       style={{
         background: '#EDE6D3',
         padding: '96px 0',

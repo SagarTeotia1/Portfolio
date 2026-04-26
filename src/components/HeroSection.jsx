@@ -72,6 +72,7 @@ export default function HeroSection() {
         display: 'flex',
         flexDirection: 'column',
         overflow: 'hidden',
+        paddingTop: '64px',
       }}
     >
       {/* ── Cage grid — mouse-reactive ── */}
@@ -97,19 +98,7 @@ export default function HeroSection() {
         initial={{ opacity: 0, y: -16 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5 }}
-        style={{
-          position: 'relative',
-          zIndex: 10,
-          borderBottom: '2px solid #1A1A1A',
-          padding: '14px 32px',
-          display: 'flex',
-          alignItems: 'center',
-          justifyContent: 'space-between',
-          flexWrap: 'wrap',
-          gap: '10px',
-          flexShrink: 0,
-          background: '#FAF8F2',
-        }}
+        className="hero-top-bar"
       >
         {/* Pulse badge */}
         <div style={{ display: 'flex', alignItems: 'center', gap: '9px' }}>

@@ -366,4 +366,80 @@ input, textarea {
   }
 }
 
+/* ── Hero top bar ── */
+.hero-top-bar {
+  position: relative;
+  z-index: 10;
+  border-bottom: 2px solid #1A1A1A;
+  padding: 12px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 8px;
+  flex-shrink: 0;
+  background: #FAF8F2;
+}
 
+/* ── Mobile responsive ── */
+@media (max-width: 767px) {
+  .hero-top-bar {
+    padding: 10px 20px;
+    gap: 6px;
+  }
+
+  .hero-left {
+    padding: 24px 20px 20px;
+  }
+
+  .hero-bottom-bar {
+    padding: 10px 20px;
+  }
+
+  .hero-stat-cell {
+    padding: 14px 16px;
+  }
+}
+
+@media (max-width: 479px) {
+  .hero-name {
+    font-size: clamp(3rem, 16.5vw, 4.5rem);
+  }
+}
+
+/* ── About timeline stacked on mobile ── */
+.about-timeline-item {
+  padding: 0 32px 0 0;
+}
+
+@media (max-width: 639px) {
+  .about-timeline-item {
+    border-right: none !important;
+    padding: 0 0 24px 0 !important;
+    border-bottom: 1px solid rgba(26,26,26,0.12);
+  }
+
+  .about-timeline-item:last-child {
+    border-bottom: none !important;
+    padding-bottom: 0 !important;
+  }
+}
+
+/* ── Featured card padding ── */
+.featured-pad {
+  padding: 40px;
+}
+
+@media (max-width: 767px) {
+  .featured-pad {
+    padding: 24px 20px;
+  }
+}
+
+/* ── Section padding on mobile ── */
+@media (max-width: 767px) {
+  .section-mobile {
+    padding-top: 64px !important;
+    padding-bottom: 64px !important;
+  }
+}

@@ -302,10 +302,9 @@ export default function About() {
               <motion.div
                 key={i}
                 variants={itemVariant}
+                className="about-timeline-item"
                 style={{
-                  padding: '0 32px 0 0',
                   borderRight: i < timeline.length - 1 ? '2px solid #1A1A1A' : 'none',
-                  paddingRight: '32px',
                   paddingLeft: i > 0 ? '32px' : '0',
                 }}
               >

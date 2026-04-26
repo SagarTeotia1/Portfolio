@@ -46,6 +46,7 @@ export default function TechStack() {
   return (
     <section
       id="stack"
+      className="section-mobile"
       style={{
         background: '#1A1A1A',
         padding: '96px 0',

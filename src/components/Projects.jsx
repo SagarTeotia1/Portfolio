@@ -54,6 +54,7 @@ export default function Projects() {
   return (
     <section
       id="projects"
+      className="section-mobile"
       style={{
         background: '#FAF8F2',
         padding: '96px 0',
@@ -114,7 +115,7 @@ export default function Projects() {
             className="featured-inner"
           >
             {/* Content */}
-            <div style={{ padding: '40px' }}>
+            <div className="featured-pad">
               <div
                 style={{
                   display: 'flex',
