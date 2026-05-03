@@ -71,7 +71,7 @@ export default function Contact() {
           >
             {/* Big email */}
             <a
-              href="mailto:team@sagarteotia.in"
+              href="mailto:sagar1teotia@gmail.com"
               style={{
                 display: 'block',
                 fontFamily: 'Space Grotesk, sans-serif',
@@ -87,7 +87,7 @@ export default function Contact() {
               onMouseEnter={(e) => (e.currentTarget.style.color = '#8B6244')}
               onMouseLeave={(e) => (e.currentTarget.style.color = '#1A1A1A')}
             >
-              team@sagarteotia.in ↗
+              sagar1teotia@gmail.com ↗
             </a>
 
             <div style={{ display: 'flex', flexDirection: 'column', gap: '10px' }}>
@@ -101,6 +101,11 @@ export default function Contact() {
                   label: 'LinkedIn',
                   value: 'linkedin.com/in/sagarteotia',
                   href: 'https://linkedin.com/in/sagarteotia',
+                },
+                {
+                  label: 'Resume',
+                  value: 'View / Download PDF',
+                  href: 'https://drive.google.com/file/d/14mFiNEOq_X6g_PC9BIn5trsmL2phUqJh/view?usp=sharing',
                 },
               ].map((item, i) => (
                 <motion.a

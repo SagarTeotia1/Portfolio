@@ -1,5 +1,5 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const experiences = [
   {
@@ -55,6 +55,10 @@ const experiences = [
 ];
 
 export default function Experience() {
+  const [expanded, setExpanded] = useState({});
+
+  const toggle = (i) => setExpanded((prev) => ({ ...prev, [i]: !prev[i] }));
+
   return (
     <section
       id="experience"
@@ -244,8 +248,8 @@ export default function Experience() {
 
                   {/* Card body */}
                   <div style={{ padding: '22px 24px' }}>
-                    <ul style={{ margin: 0, padding: 0, listStyle: 'none', marginBottom: '18px' }}>
-                      {exp.points.map((point, j) => (
+                    <ul style={{ margin: 0, padding: 0, listStyle: 'none', marginBottom: '4px' }}>
+                      {(expanded[i] ? exp.points : exp.points.slice(0, 2)).map((point, j) => (
                         <li
                           key={j}
                           style={{
@@ -273,6 +277,30 @@ export default function Experience() {
                         </li>
                       ))}
                     </ul>
+
+                    {exp.points.length > 2 && (
+                      <button
+                        onClick={() => toggle(i)}
+                        style={{
+                          background: 'none',
+                          border: 'none',
+                          cursor: 'pointer',
+                          fontFamily: 'Space Grotesk, sans-serif',
+                          fontWeight: '700',
+                          fontSize: '0.78rem',
+                          color: '#8B6244',
+                          padding: '0 0 14px 14px',
+                          letterSpacing: '0.04em',
+                          display: 'flex',
+                          alignItems: 'center',
+                          gap: '4px',
+                        }}
+                      >
+                        {expanded[i] ? '↑ show less' : `··· ${exp.points.length - 2} more`}
+                      </button>
+                    )}
+
+                    <div style={{ marginBottom: '18px' }} />
 
                     <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px', marginBottom: '14px' }}>
                       {exp.stack.map((tech, j) => (

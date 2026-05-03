@@ -5,39 +5,75 @@ const M = MotionLib.div;
 
 const groups = [
   {
+    category: 'Languages',
+    skills: [
+      { name: 'C++', level: 'Advanced' },
+      { name: 'Python', level: 'Advanced' },
+      { name: 'JavaScript', level: 'Advanced' },
+      { name: 'TypeScript', level: 'Advanced' },
+      { name: 'Dart', level: 'Intermediate' },
+    ],
+  },
+  {
     category: 'Backend',
     skills: [
       { name: 'Node.js', level: 'Advanced' },
       { name: 'Express', level: 'Advanced' },
-      { name: 'Python', level: 'Advanced' },
-      { name: 'PostgreSQL', level: 'Advanced' },
-      { name: 'Redis', level: 'Advanced' },
-      { name: 'Kafka', level: 'Advanced' },
+      { name: 'NestJS', level: 'Advanced' },
+      { name: 'Django', level: 'Advanced' },
+      { name: 'FastAPI', level: 'Advanced' },
+      { name: 'GraphQL', level: 'Advanced' },
+      { name: 'gRPC', level: 'Intermediate' },
+      { name: 'REST', level: 'Advanced' },
     ],
   },
   {
     category: 'Frontend',
     skills: [
-      { name: 'TypeScript', level: 'Advanced' },
-      { name: 'React', level: 'Advanced' },
-      { name: 'React Native', level: 'Advanced' },
+      { name: 'React.js', level: 'Advanced' },
       { name: 'Next.js', level: 'Advanced' },
+      { name: 'React Native', level: 'Advanced' },
+      { name: 'Flutter', level: 'Advanced' },
+      { name: 'Tailwind CSS', level: 'Advanced' },
     ],
   },
   {
-    category: 'Infrastructure',
+    category: 'Architecture',
     skills: [
-      { name: 'Distributed Systems', level: 'Advanced' },
       { name: 'Microservices', level: 'Advanced' },
-      { name: 'Google Cloud', level: 'Advanced' },
-      { name: 'Docker', level: 'Intermediate' },
-      { name: 'AWS', level: 'Intermediate' },
+      { name: 'Distributed Systems', level: 'Advanced' },
+      { name: 'Event-driven (Kafka)', level: 'Advanced' },
+    ],
+  },
+  {
+    category: 'Databases / Infra',
+    skills: [
+      { name: 'PostgreSQL', level: 'Advanced' },
+      { name: 'MongoDB', level: 'Advanced' },
+      { name: 'Redis', level: 'Advanced' },
+      { name: 'Docker', level: 'Advanced' },
+      { name: 'Kubernetes', level: 'Intermediate' },
+      { name: 'AWS', level: 'Advanced' },
     ],
   },
   {
     category: 'AI / ML',
     skills: [
-      { name: 'Deep Learning', level: 'Advanced' },
+      { name: 'TensorFlow', level: 'Advanced' },
+      { name: 'LLMs (GPT, Gemini)', level: 'Advanced' },
+      { name: 'LangChain', level: 'Advanced' },
+      { name: 'RAG', level: 'Advanced' },
+      { name: 'NLP', level: 'Intermediate' },
+    ],
+  },
+  {
+    category: 'Tools & Skills',
+    skills: [
+      { name: 'DSA', level: 'Advanced' },
+      { name: 'OAuth 2.0 / NextAuth', level: 'Advanced' },
+      { name: 'Nginx', level: 'Advanced' },
+      { name: 'Ubuntu / Linux', level: 'Advanced' },
+      { name: 'Jira', level: 'Intermediate' },
     ],
   },
 ];
@@ -99,82 +135,56 @@ export default function TechStack() {
           </h2>
         </M>
 
-        {/* Grouped skills */}
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
-            gap: '40px',
-            marginBottom: '72px',
-          }}
-        >
+        {/* Grouped skills — compact tag layout */}
+        <div style={{ display: 'flex', flexDirection: 'column', gap: '20px', marginBottom: '72px' }}>
           {groups.map((group, gi) => (
             <M
               key={gi}
-              initial={{ opacity: 0, y: 24 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: gi * 0.1 }}
+              transition={{ duration: 0.5, delay: gi * 0.07 }}
               viewport={{ once: true }}
+              style={{
+                display: 'grid',
+                gridTemplateColumns: '130px 1fr',
+                gap: '12px 20px',
+                alignItems: 'start',
+                paddingBottom: '20px',
+                borderBottom: '1px solid rgba(250,248,242,0.06)',
+              }}
             >
-              <div
+              <span
                 style={{
                   fontFamily: 'Space Mono, monospace',
-                  fontSize: '0.6rem',
+                  fontSize: '0.58rem',
                   fontWeight: '700',
                   color: '#C4956A',
-                  letterSpacing: '0.16em',
+                  letterSpacing: '0.14em',
                   textTransform: 'uppercase',
-                  marginBottom: '16px',
-                  paddingBottom: '10px',
-                  borderBottom: '1px solid rgba(196,149,106,0.2)',
+                  paddingTop: '5px',
+                  lineHeight: '1.4',
                 }}
               >
                 {group.category}
-              </div>
+              </span>
 
-              <div style={{ display: 'flex', flexDirection: 'column', gap: '6px' }}>
+              <div style={{ display: 'flex', flexWrap: 'wrap', gap: '7px' }}>
                 {group.skills.map((skill, si) => (
-                  <M
+                  <span
                     key={si}
-                    initial={{ opacity: 0, x: -10 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.4, delay: gi * 0.1 + si * 0.06 }}
-                    viewport={{ once: true }}
-                    whileHover={{ x: 4 }}
                     style={{
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'space-between',
-                      padding: '9px 14px',
-                      border: `1.5px solid ${skill.level === 'Advanced' ? 'rgba(196,149,106,0.4)' : 'rgba(250,248,242,0.12)'}`,
-                      background: skill.level === 'Advanced' ? 'rgba(196,149,106,0.06)' : 'transparent',
-                      cursor: 'default',
-                      transition: 'border-color 0.15s',
+                      fontFamily: 'Space Grotesk, sans-serif',
+                      fontWeight: '600',
+                      fontSize: '0.78rem',
+                      color: skill.level === 'Advanced' ? '#FAF8F2' : 'rgba(250,248,242,0.42)',
+                      background: skill.level === 'Advanced' ? 'rgba(196,149,106,0.12)' : 'transparent',
+                      border: `1px solid ${skill.level === 'Advanced' ? 'rgba(196,149,106,0.35)' : 'rgba(250,248,242,0.1)'}`,
+                      padding: '4px 10px',
+                      letterSpacing: '0.01em',
                     }}
                   >
-                    <span
-                      style={{
-                        fontFamily: 'Space Grotesk, sans-serif',
-                        fontWeight: '600',
-                        fontSize: '0.9rem',
-                        color: skill.level === 'Advanced' ? '#C4956A' : 'rgba(250,248,242,0.5)',
-                      }}
-                    >
-                      {skill.name}
-                    </span>
-                    <span
-                      style={{
-                        fontFamily: 'Space Mono, monospace',
-                        fontSize: '0.5rem',
-                        color: skill.level === 'Advanced' ? 'rgba(196,149,106,0.6)' : 'rgba(250,248,242,0.2)',
-                        fontWeight: '700',
-                        letterSpacing: '0.1em',
-                        textTransform: 'uppercase',
-                      }}
-                    >
-                      {skill.level === 'Advanced' ? '●●●' : '●●○'}
-                    </span>
-                  </M>
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </M>
@@ -222,7 +232,7 @@ export default function TechStack() {
             </p>
           </div>
           <a
-            href="mailto:team@sagarteotia.in"
+            href="mailto:sagar1teotia@gmail.com"
             className="brutal-btn"
             style={{
               background: '#C4956A',
