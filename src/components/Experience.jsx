@@ -4,26 +4,26 @@ import { motion } from 'framer-motion';
 const experiences = [
   {
     num: '01',
-    role: 'Founding Engineer & Technical Lead',
+    role: 'Freelancer',
     company: 'Micro Kahani PVT LTD',
     period: 'Dec 2025 – Present',
     tag: 'Current',
     tagBg: '#8B6244',
     points: [
-      'Built and scaled a distributed OTT backend for short-form video streaming — optimized for high-traffic bursts and low-latency delivery using Node.js, Redis, and cloud storage',
-      'Designed media infrastructure with HLS streaming and adaptive bitrate optimization for reliable playback across varying network conditions',
+      'Built and launched a scalable OTT micro-drama app on Google Play Store and App Store for production house Digital Kalakaar (15M+ followers)',
+      'Designed high-performance backend and streaming systems supporting 200K+ content views',
       'Developed content ingestion pipelines, creator/admin tooling, and analytics systems to support rapid scaling',
-      'Drove system reliability under real-world load — 15M+ organic reach, 200M+ monthly views via Instagram-led distribution',
+      'Architected media infrastructure with HLS streaming and adaptive bitrate optimization for reliable playback across varying network conditions',
     ],
     stack: ['Node.js', 'Redis', 'HLS', 'Cloud Storage', 'TypeScript', 'Microservices'],
-    highlight: '15M+ Reach · 200M+ Monthly Views',
+    highlight: '15M+ Followers · 200K+ Content Views',
     isCurrent: true,
   },
   {
     num: '02',
     role: 'Project Lead',
     company: 'NDRF — Ministry of Home Affairs, Govt. of India',
-    period: 'Feb 2024 – Dec 2025',
+    period: 'Dec 2023 – Dec 2025',
     tag: '₹2.7M Funded',
     tagBg: '#1A1A1A',
     points: [
@@ -40,7 +40,7 @@ const experiences = [
     num: '03',
     role: 'Software Engineer',
     company: 'GKM Energy PVT LTD',
-    period: 'Aug 2024 – Feb 2025',
+    period: 'Dec 2024 – Apr 2025',
     tag: 'MNRE Approved',
     tagBg: '#8B6244',
     points: [
