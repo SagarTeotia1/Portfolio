@@ -38,7 +38,7 @@ function NameLine({ text, color, fromX, delay }) {
 }
 
 const stats = [
-  { prefix: '₹', to: 27,  suffix: 'L+', label: 'Grants & Awards'         },
+  { prefix: '₹', to: 35,  suffix: 'L+', label: 'Grants & Awards'         },
   { prefix: '',  to: 11,  suffix: '+',  label: 'National & Intl. Awards'  },
   { prefix: '',  to: 15,  suffix: '+',  label: 'Real-World Deployments'   },
   { prefix: '',  to: 20,  suffix: '',   label: 'Years Old'                },

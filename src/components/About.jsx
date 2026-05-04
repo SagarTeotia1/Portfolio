@@ -140,9 +140,10 @@ export default function About() {
             >
               I built AI+VR disaster response systems for India's NDRF, turning a hackathon win into{' '}
               <strong style={{ color: '#1A1A1A' }}>₹2.7M in government funding</strong>. I built the
-              backbone of <strong style={{ color: '#1A1A1A' }}>MicroKahani</strong> — 15M+ followers,
-              200M+ monthly views. I've built navigation for people with disabilities, solar platforms,
-              logistics systems.
+              backbone of <strong style={{ color: '#1A1A1A' }}>MicroKahani</strong> for{' '}
+              <strong style={{ color: '#1A1A1A' }}>Digital Kalakaar</strong> — a production house with
+              15M+ followers and 200M+ monthly views across social media. I've built navigation for
+              people with disabilities, solar platforms, logistics systems.
             </p>
             <p
               style={{
