@@ -15,7 +15,7 @@ const experiences = [
       'Developed content ingestion pipelines, creator/admin tooling, and analytics systems to support rapid scaling',
       'Architected media infrastructure with HLS streaming and adaptive bitrate optimization for reliable playback across varying network conditions',
     ],
-    stack: ['Node.js', 'Redis', 'HLS', 'Cloud Storage', 'TypeScript', 'Microservices'],
+    stack: ['Node.js', 'Redis', 'HLS', 'Cloud Storage', 'TypeScript'],
     highlight: '15M+ Followers · 200K+ Content Views',
     isCurrent: true,
   },
