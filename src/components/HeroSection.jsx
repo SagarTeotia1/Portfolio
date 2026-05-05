@@ -203,7 +203,7 @@ export default function HeroSection() {
             style={{ display: 'flex', flexWrap: 'wrap', gap: '0', marginBottom: '40px' }}
           >
             {[
-              { label: 'Full Stack Engineer', bg: '#1A1A1A', fg: '#FAF8F2' },
+              { label: 'Full Stack AI Engineer', bg: '#1A1A1A', fg: '#FAF8F2' },
               { label: 'Distributed Systems', bg: '#8B6244', fg: '#FAF8F2' },
               { label: 'Builder',             bg: '#EDE6D3', fg: '#1A1A1A' },
             ].map((tag, i) => (
