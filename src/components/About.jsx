@@ -142,8 +142,9 @@ export default function About() {
               <strong style={{ color: '#1A1A1A' }}>₹2.7M in government funding</strong>. I built the
               backbone of <strong style={{ color: '#1A1A1A' }}>MicroKahani</strong> for{' '}
               <strong style={{ color: '#1A1A1A' }}>Digital Kalakaar</strong> — a production house with
-              15M+ followers and 200M+ monthly views across social media. I've built navigation for
-              people with disabilities, solar platforms, logistics systems.
+              15M+ followers and 200M+ monthly views across social media. I work end-to-end — from{' '}
+              <strong style={{ color: '#1A1A1A' }}>LLM integration and AI pipelines</strong> to
+              production infrastructure, APIs, and polished frontends.
             </p>
             <p
               style={{
@@ -172,8 +173,7 @@ export default function About() {
               { label: 'Location', value: 'Greater Noida, India' },
               { label: 'Open to', value: 'SF · NYC · Anywhere · Remote OK' },
               { label: 'Studying', value: 'B.Tech CSE, MAIT · 2023–2027' },
-              { label: 'Experience', value: '2+ yrs · Distributed Systems & Full Stack' },
-              { label: 'Seeking', value: 'Full Stack / AI' },
+              { label: 'Seeking', value: 'AI + Full Stack · End-to-End' },
             ].map((fact, i) => (
               <motion.div
                 key={i}

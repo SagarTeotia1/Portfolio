@@ -204,8 +204,8 @@ export default function HeroSection() {
           >
             {[
               { label: 'Full Stack AI Engineer', bg: '#1A1A1A', fg: '#FAF8F2' },
-              { label: 'Distributed Systems', bg: '#8B6244', fg: '#FAF8F2' },
-              { label: 'Builder',             bg: '#EDE6D3', fg: '#1A1A1A' },
+              { label: 'LLMs · RAG · AI Pipelines', bg: '#8B6244', fg: '#FAF8F2' },
+              { label: 'End-to-End Builder',  bg: '#EDE6D3', fg: '#1A1A1A' },
             ].map((tag, i) => (
               <motion.span
                 key={i}
