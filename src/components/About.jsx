@@ -173,7 +173,7 @@ export default function About() {
               { label: 'Open to', value: 'SF · NYC · Anywhere · Remote OK' },
               { label: 'Studying', value: 'B.Tech CSE, MAIT · 2023–2027' },
               { label: 'Experience', value: '2+ yrs · Distributed Systems & Full Stack' },
-              { label: 'Seeking', value: 'Backend / Full Stack · US Relocation Ready' },
+              { label: 'Seeking', value: 'Full Stack / AI' },
             ].map((fact, i) => (
               <motion.div
                 key={i}
@@ -220,7 +220,7 @@ export default function About() {
 
             <div style={{ marginTop: '24px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <a
-                href="mailto:team@sagarteotia.in?subject=Resume Request"
+                href="mailto:sagar1teotia@gmail.com?subject=Resume Request"
                 className="brutal-btn"
                 style={{
                   background: '#8B6244',
@@ -237,7 +237,7 @@ export default function About() {
                 Request Resume →
               </a>
               <a
-                href="https://github.com/sagar1teotia"
+                href="https://github.com/SagarTeotia1"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="brutal-btn"

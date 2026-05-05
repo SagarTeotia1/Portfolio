@@ -92,7 +92,7 @@ export default function Navbar() {
 
         {/* CTA */}
         <a
-          href="mailto:team@sagarteotia.in"
+          href="mailto:sagar1teotia@gmail.com"
           className="brutal-btn hidden md:inline-block"
           style={{
             background: '#1A1A1A',
@@ -157,7 +157,7 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="mailto:team@sagarteotia.in"
+            href="mailto:sagar1teotia@gmail.com"
             onClick={() => setIsOpen(false)}
             style={{
               display: 'inline-block',

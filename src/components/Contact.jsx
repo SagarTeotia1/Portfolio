@@ -94,8 +94,8 @@ export default function Contact() {
               {[
                 {
                   label: 'GitHub',
-                  value: 'github.com/sagar1teotia',
-                  href: 'https://github.com/sagar1teotia',
+                  value: 'github.com/SagarTeotia1',
+                  href: 'https://github.com/SagarTeotia1',
                 },
                 {
                   label: 'LinkedIn',

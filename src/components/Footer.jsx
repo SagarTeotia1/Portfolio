@@ -69,9 +69,9 @@ export default function Footer() {
               {
                 label: 'Connect',
                 links: [
-                  { name: 'GitHub', href: 'https://github.com/sagar1teotia' },
+                  { name: 'GitHub', href: 'https://github.com/SagarTeotia1' },
                   { name: 'LinkedIn', href: 'https://linkedin.com/in/sagarteotia' },
-                  { name: 'Email', href: 'mailto:team@sagarteotia.in' },
+                  { name: 'Email', href: 'mailto:sagar1teotia@gmail.com' },
                 ],
               },
             ].map((group, i) => (
