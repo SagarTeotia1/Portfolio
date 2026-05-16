@@ -102,11 +102,6 @@ export default function Contact() {
                   value: 'linkedin.com/in/sagarteotia',
                   href: 'https://linkedin.com/in/sagarteotia',
                 },
-                {
-                  label: 'Resume',
-                  value: 'View / Download PDF',
-                  href: 'https://drive.google.com/file/d/14mFiNEOq_X6g_PC9BIn5trsmL2phUqJh/view?usp=sharing',
-                },
               ].map((item, i) => (
                 <motion.a
                   key={i}

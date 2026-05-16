@@ -268,25 +268,6 @@ export default function HeroSection() {
             >
               Get in Touch →
             </motion.a>
-            <motion.a
-              href="https://drive.google.com/file/d/14mFiNEOq_X6g_PC9BIn5trsmL2phUqJh/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="brutal-btn"
-              whileHover={{ y: -2 }}
-              whileTap={{ y: 1 }}
-              style={{
-                background: '#8B6244',
-                color: '#FAF8F2',
-                padding: '13px 32px',
-                fontWeight: '700',
-                fontSize: '0.85rem',
-                letterSpacing: '0.08em',
-                textTransform: 'uppercase',
-              }}
-            >
-              Resume ↗
-            </motion.a>
           </motion.div>
         </div>
 

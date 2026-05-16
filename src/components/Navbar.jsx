@@ -90,23 +90,6 @@ export default function Navbar() {
           ))}
         </div>
 
-        {/* CTA */}
-        <a
-          href="mailto:sagar1teotia@gmail.com"
-          className="brutal-btn hidden md:inline-block"
-          style={{
-            background: '#1A1A1A',
-            color: '#FAF8F2',
-            padding: '8px 20px',
-            fontWeight: '700',
-            fontSize: '0.75rem',
-            letterSpacing: '0.08em',
-            textTransform: 'uppercase',
-          }}
-        >
-          Hire Me
-        </a>
-
         {/* Mobile toggle */}
         <button
           className="md:hidden"
@@ -156,25 +139,6 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="mailto:sagar1teotia@gmail.com"
-            onClick={() => setIsOpen(false)}
-            style={{
-              display: 'inline-block',
-              marginTop: '20px',
-              background: '#1A1A1A',
-              color: '#FAF8F2',
-              padding: '12px 24px',
-              fontFamily: 'Space Grotesk, sans-serif',
-              fontWeight: '700',
-              fontSize: '0.85rem',
-              letterSpacing: '0.06em',
-              textTransform: 'uppercase',
-              border: '2px solid #1A1A1A',
-            }}
-          >
-            Hire Me →
-          </a>
         </div>
       )}
     </nav>

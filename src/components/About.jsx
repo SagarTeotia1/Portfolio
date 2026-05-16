@@ -219,23 +219,6 @@ export default function About() {
 
             <div style={{ marginTop: '24px', display: 'flex', gap: '10px', flexWrap: 'wrap' }}>
               <a
-                href="mailto:sagar1teotia@gmail.com?subject=Resume Request"
-                className="brutal-btn"
-                style={{
-                  background: '#8B6244',
-                  color: '#FAF8F2',
-                  padding: '12px 22px',
-                  fontWeight: '700',
-                  fontSize: '0.78rem',
-                  letterSpacing: '0.08em',
-                  textTransform: 'uppercase',
-                  flexGrow: 1,
-                  textAlign: 'center',
-                }}
-              >
-                Request Resume →
-              </a>
-              <a
                 href="https://github.com/SagarTeotia1"
                 target="_blank"
                 rel="noopener noreferrer"
