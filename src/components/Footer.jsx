@@ -135,16 +135,6 @@ export default function Footer() {
           >
             © {new Date().getFullYear()} Sagar Teotia. Still searching.
           </p>
-          <p
-            style={{
-              fontFamily: 'Space Mono, monospace',
-              fontSize: '0.62rem',
-              color: 'rgba(250,248,242,0.2)',
-              margin: 0,
-            }}
-          >
-            Greater Noida, India · Open to SF / NYC / Anywhere
-          </p>
         </div>
       </div>
     </footer>

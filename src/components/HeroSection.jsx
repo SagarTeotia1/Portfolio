@@ -117,18 +117,7 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* Location */}
-        <span
-          style={{
-            fontFamily: 'Space Mono, monospace',
-            fontSize: '0.62rem',
-            color: '#3D2B1F',
-            opacity: 0.55,
-            letterSpacing: '0.08em',
-          }}
-        >
-          Greater Noida, India → US / Anywhere
-        </span>
+
       </motion.div>
 
       {/* ── Main content: left + right sidebar ── */}

@@ -1,16 +1,19 @@
 {
   "name": "Sagar Teotia — Full Stack AI Engineer",
   "short_name": "Sagar Teotia",
-  "description": "Portfolio of Sagar Teotia, Full Stack AI Engineer · End-to-End Builder from India.",
+  "description": "Portfolio of Sagar Teotia, Full Stack AI Engineer from India. NDRF · MicroKahani · World Government Summit.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#FAF8F2",
   "theme_color": "#FAF8F2",
+  "lang": "en-US",
+  "categories": ["portfolio", "technology", "developer"],
   "icons": [
     {
       "src": "/logo2.png",
       "sizes": "any",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     }
   ]
 }

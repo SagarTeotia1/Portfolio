@@ -1,8 +1,12 @@
 User-agent: *
 Allow: /
 
-# Sitemaps
-Sitemap: https://www.sagarteotia.in/sitemap.xml
+# Block build artifacts
+Disallow: /src/
+Disallow: /.git/
 
 # Crawl-delay (polite)
 Crawl-delay: 1
+
+# Sitemaps
+Sitemap: https://www.sagarteotia.in/sitemap.xml

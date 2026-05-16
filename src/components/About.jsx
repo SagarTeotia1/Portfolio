@@ -170,8 +170,7 @@ export default function About() {
             viewport={{ once: true }}
           >
             {[
-              { label: 'Location', value: 'Greater Noida, India' },
-              { label: 'Open to', value: 'SF · NYC · Anywhere · Remote OK' },
+              { label: 'Open to', value: 'Full-time · Contract · Remote' },
               { label: 'Studying', value: 'B.Tech CSE, MAIT · 2023–2027' },
               { label: 'Seeking', value: 'AI + Full Stack · End-to-End' },
             ].map((fact, i) => (

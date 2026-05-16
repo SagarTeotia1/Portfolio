@@ -217,7 +217,7 @@ export default function TechStack() {
                 margin: '0 0 6px',
               }}
             >
-              Open to Remote Work
+              Open to Opportunities
             </p>
             <p
               style={{
@@ -228,7 +228,7 @@ export default function TechStack() {
                 letterSpacing: '0.04em',
               }}
             >
-              Willing to relocate: San Francisco · New York · Anywhere in the US
+              Full-time · Contract · Remote
             </p>
           </div>
           <a

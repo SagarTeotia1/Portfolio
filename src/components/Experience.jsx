@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion';
 const experiences = [
   {
     num: '01',
-    role: 'Freelancer',
+    role: 'Founding Engineer',
     company: 'Micro Kahani PVT LTD',
     period: 'Dec 2025 – Present',
     tag: 'Current',
