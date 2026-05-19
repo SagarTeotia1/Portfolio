@@ -1,4 +1,5 @@
 import React from 'react';
+import { Routes, Route } from 'react-router-dom';
 import ScrollProgress from './components/ScrollProgress';
 import Navbar from './components/Navbar';
 import HeroSection from './components/HeroSection';
@@ -11,48 +12,35 @@ import Projects from './components/Projects';
 import TechStack from './components/TechStack';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CaseStudyPage from './pages/CaseStudyPage';
+import FounderVentures from './components/FounderVentures';
+
+function Portfolio() {
+  return (
+    <div style={{ background: '#FAF8F2', minHeight: '100vh' }}>
+      <ScrollProgress />
+      <Navbar />
+      <HeroSection />
+      <Marquee />
+      <About />
+      <KafkaBreak />
+      <Recognition />
+      <Marquee dark />
+      <FounderVentures />
+      <Experience />
+      <Projects />
+      <TechStack />
+      <Contact />
+      <Footer />
+    </div>
+  );
+}
 
 export default function App() {
   return (
-    <div style={{ background: '#FAF8F2', minHeight: '100vh' }}>
-      {/* Scroll progress — top bar */}
-      <ScrollProgress />
-
-      {/* Navigation */}
-      <Navbar />
-
-      {/* Chapter 1: The entrance — who are you? */}
-      <HeroSection />
-
-      {/* Achievement ticker — energy, credibility, momentum */}
-      <Marquee />
-
-      {/* Chapter 2: The human story — what drives you? */}
-      <About />
-
-      {/* Chapter break — the Kafka quote, full weight, dark pause */}
-      <KafkaBreak />
-
-      {/* Chapter 3: External proof — who has noticed? */}
-      <Recognition />
-
-      {/* Marquee dark variant — between recognition and work */}
-      <Marquee dark />
-
-      {/* Chapter 4: The work itself — where it happened */}
-      <Experience />
-
-      {/* Chapter 5: The things built — show don't tell */}
-      <Projects />
-
-      {/* Chapter 6: The depth — how you build */}
-      <TechStack />
-
-      {/* Chapter 7: The invitation — the story continues */}
-      <Contact />
-
-      {/* Outro */}
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Portfolio />} />
+      <Route path="/case/:slug" element={<CaseStudyPage />} />
+    </Routes>
   );
 }

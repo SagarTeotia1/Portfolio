@@ -334,7 +334,7 @@ export default function Experience() {
                         letterSpacing: '0.03em',
                       }}
                     >
-                      ↗ {exp.highlight}
+                      {exp.highlight}
                     </div>
                   </div>
                 </div>

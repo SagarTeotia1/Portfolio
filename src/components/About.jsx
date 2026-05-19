@@ -170,9 +170,8 @@ export default function About() {
             viewport={{ once: true }}
           >
             {[
-              { label: 'Open to', value: 'Full-time · Contract · Remote' },
+              { label: 'Open to', value: 'Great Opportunities' },
               { label: 'Studying', value: 'B.Tech CSE, MAIT · 2023–2027' },
-              { label: 'Seeking', value: 'AI + Full Stack · End-to-End' },
             ].map((fact, i) => (
               <motion.div
                 key={i}

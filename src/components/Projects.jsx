@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const featured = {
   num: '01',
@@ -10,7 +11,50 @@ const featured = {
   stack: ['Node.js', 'Kafka', 'Redis', 'PostgreSQL', 'VR', 'AI/ML', 'Microservices'],
   org: 'Ministry of Home Affairs, Govt. of India',
   link: null,
+  images: ['/assets/Project 1.png'],
 };
+
+const founderVentures = [
+  {
+    slug: 'codespirit',
+    name: 'CODESPIRIT',
+    url: 'codespirit.in',
+    link: 'https://codespirit.in',
+    year: '2024',
+    story: "Wanted a community of builders, not just students who passed exams. Built one from scratch — workshops, challenges, open source. People showed up.",
+    what: 'Student tech community with 11K+ members across campuses — peer-led workshops, build challenges, collaborative projects.',
+    metric1: { label: 'Members', value: '11K+' },
+    metric2: { label: 'Campuses', value: 'Multi' },
+    metric3: { label: 'Status', value: 'Live' },
+    stack: ['Community', 'Web Dev', 'Open Source', 'Workshops'],
+  },
+  {
+    slug: 'campusmart',
+    name: 'CAMPUSMART',
+    url: 'campusmart.store',
+    link: 'https://campusmart.store',
+    year: '2025',
+    story: 'Noticed students haggling over second-hand books in college corridors. Built the marketplace they needed — end-to-end, alone, in a hostel room.',
+    what: 'Live student marketplace for second-hand books, drafts, and essentials across 3 colleges.',
+    metric1: { label: 'Users', value: '2.5K+' },
+    metric2: { label: 'Transactions', value: '1K+' },
+    metric3: { label: 'Colleges', value: '3' },
+    stack: ['Next.js', 'Node.js', 'MongoDB', 'Redis', 'Azure'],
+  },
+  {
+    slug: 'collegepaglu',
+    name: 'COLLEGEPAGLU',
+    url: 'Campus App',
+    link: null,
+    year: '2026',
+    story: 'Campus food ordering was a mess — queues, wrong orders, no delivery. Built a super-app from scratch that understood college chaos, not generic delivery UX.',
+    what: 'Campus super-app: food ordering, multi-vendor delivery, route optimization, and sustainability tracking — mobile-first.',
+    metric1: { label: 'Type', value: 'Founder' },
+    metric2: { label: 'Platform', value: 'Mobile' },
+    metric3: { label: 'Stack', value: 'RN + GCP' },
+    stack: ['React Native', 'Node.js', 'MongoDB', 'Redis', 'GCP'],
+  },
+];
 
 const projects = [
   {
@@ -18,11 +62,12 @@ const projects = [
     name: 'MICROKAHANI',
     tagline: 'Distributed OTT Micro-Drama Platform',
     desc: 'Built and scaled the technical backbone of a micro-drama streaming platform for Digital Kalakaar. HLS adaptive streaming, high-traffic burst handling, creator tooling, and analytics systems.',
-    impact: '15M+ Followers · 200K+ Content Views',
+    impact: '15M+ Followers · 200M+ Monthly Views',
     stack: ['Node.js', 'Redis', 'HLS', 'TypeScript', 'Analytics'],
     org: 'Micro Kahani PVT LTD',
     bg: '#FFFFFF',
     link: null,
+    images: ['/assets/Project 2.png'],
   },
   {
     num: '03',
@@ -34,28 +79,7 @@ const projects = [
     org: 'World Gov Summit 2025',
     bg: '#EDE6D3',
     link: null,
-  },
-  {
-    num: '04',
-    name: 'COLLEGEPAGLU',
-    tagline: 'Smart Campus Commerce Platform',
-    desc: 'Campus-focused platform streamlining student logistics, food ordering, delivery coordination, and sustainability tracking through route optimization and smart campus commerce workflows.',
-    impact: 'Route Optimization · Smart Campus Analytics',
-    stack: ['React Native', 'Node.js', 'MongoDB', 'Redis', 'GCP'],
-    org: 'Campus Product',
-    bg: '#FFFFFF',
-    link: null,
-  },
-  {
-    num: '05',
-    name: 'CAMPUSMART',
-    tagline: 'Student Marketplace · 3 Colleges',
-    desc: 'Full-stack second-hand marketplace for books, drafts, and student essentials. Scaled to 2.5K+ users enabling 1K+ campus transactions across 3 colleges.',
-    impact: '2.5K+ Users · 1K+ Transactions',
-    stack: ['Next.js', 'Node.js', 'MongoDB', 'Redis', 'Azure'],
-    org: 'campusmart.store',
-    bg: '#FAF8F2',
-    link: null,
+    images: ['/assets/Project 4.png'],
   },
 ];
 
@@ -194,7 +218,90 @@ const hackathonProjects = [
   },
 ];
 
-function ProjectCard({ project, i, animate: shouldAnimate = false }) {
+function FounderVentureCard({ venture, i, onOpen }) {
+  const [hovered, setHovered] = useState(false);
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16, 1, 0.3, 1] }}
+      viewport={{ once: true }}
+      onMouseEnter={() => setHovered(true)}
+      onMouseLeave={() => setHovered(false)}
+      onClick={() => onOpen(venture)}
+      style={{
+        background: hovered ? '#EDE6D3' : '#FAF8F2',
+        border: '2px solid #1A1A1A',
+        boxShadow: hovered ? '6px 6px 0 #8B6244' : '3px 3px 0 #1A1A1A',
+        transform: hovered ? 'translate(-2px, -2px)' : 'translate(0,0)',
+        transition: 'all 0.15s ease',
+        cursor: 'pointer',
+        display: 'flex',
+        flexDirection: 'column',
+        position: 'relative',
+        overflow: 'hidden',
+      }}
+    >
+      {/* Top bar */}
+      <div style={{ background: '#1A1A1A', padding: '10px 20px', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
+        <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.58rem', fontWeight: '700', color: '#C4956A', letterSpacing: '0.12em', textTransform: 'uppercase' }}>
+          Founder · {venture.year}
+        </span>
+        {venture.link ? (
+          <a
+            href={venture.link}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={(e) => e.stopPropagation()}
+            style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.55rem', color: '#FAF8F2', letterSpacing: '0.08em', textDecoration: 'none', borderBottom: '1px solid rgba(250,248,242,0.3)', paddingBottom: '1px' }}
+          >
+            {venture.url} ↗
+          </a>
+        ) : (
+          <span style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.55rem', color: 'rgba(250,248,242,0.4)', letterSpacing: '0.08em' }}>{venture.url}</span>
+        )}
+      </div>
+
+      <div style={{ padding: '24px 22px', flex: 1, display: 'flex', flexDirection: 'column', gap: '14px' }}>
+        {/* Name */}
+        <h3 style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: '800', fontSize: '1.5rem', color: '#1A1A1A', margin: 0, letterSpacing: '-0.02em' }}>
+          {venture.name}
+        </h3>
+
+        {/* Founder story — italic, pull-quote feel */}
+        <p style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.72rem', fontStyle: 'italic', color: '#3D2B1F', lineHeight: '1.65', margin: 0, borderLeft: '3px solid #8B6244', paddingLeft: '12px' }}>
+          "{venture.story}"
+        </p>
+
+        {/* What it is */}
+        <p style={{ fontFamily: 'Space Grotesk, sans-serif', fontSize: '0.84rem', lineHeight: '1.6', color: '#3D2B1F', margin: 0, opacity: 0.8 }}>
+          {venture.what}
+        </p>
+
+        {/* Metrics row */}
+        <div style={{ display: 'flex', gap: '0', border: '1.5px solid #1A1A1A', marginTop: 'auto' }}>
+          {[venture.metric1, venture.metric2, venture.metric3].map((m, j) => (
+            <div key={j} style={{ flex: 1, padding: '10px 12px', borderRight: j < 2 ? '1.5px solid #1A1A1A' : 'none', textAlign: 'center' }}>
+              <div style={{ fontFamily: 'Space Grotesk, sans-serif', fontWeight: '800', fontSize: '1rem', color: '#1A1A1A', lineHeight: '1' }}>{m.value}</div>
+              <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '0.52rem', color: '#8B6244', fontWeight: '700', letterSpacing: '0.1em', textTransform: 'uppercase', marginTop: '4px' }}>{m.label}</div>
+            </div>
+          ))}
+        </div>
+
+        {/* Stack */}
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: '5px' }}>
+          {venture.stack.map((tech, j) => (
+            <span key={j} style={{ border: '1.5px solid #1A1A1A', padding: '2px 8px', fontFamily: 'Space Mono, monospace', fontSize: '0.52rem', fontWeight: '700', color: '#1A1A1A', letterSpacing: '0.04em' }}>
+              {tech}
+            </span>
+          ))}
+        </div>
+      </div>
+    </motion.div>
+  );
+}
+
+function ProjectCard({ project, i, animate: shouldAnimate = false, onOpen }) {
   const [hovered, setHovered] = useState(false);
 
   const cardProps = shouldAnimate
@@ -215,6 +322,7 @@ function ProjectCard({ project, i, animate: shouldAnimate = false }) {
       {...cardProps}
       onMouseEnter={() => setHovered(true)}
       onMouseLeave={() => setHovered(false)}
+      onClick={() => onOpen && onOpen(project)}
       style={{
         background: project.bg,
         border: '2px solid #1A1A1A',
@@ -224,7 +332,8 @@ function ProjectCard({ project, i, animate: shouldAnimate = false }) {
         overflow: 'hidden',
         display: 'flex',
         flexDirection: 'column',
-        cursor: 'default',
+        cursor: onOpen ? 'pointer' : 'default',
+        position: 'relative',
       }}
     >
       <div style={{ padding: '24px 22px 0', display: 'flex', justifyContent: 'space-between' }}>
@@ -331,7 +440,7 @@ function ProjectCard({ project, i, animate: shouldAnimate = false }) {
             gap: '8px',
           }}
         >
-          <span>↗ {project.impact}</span>
+          <span>{project.impact}</span>
           {project.link && (
             <a
               href={project.link}
@@ -358,6 +467,7 @@ function ProjectCard({ project, i, animate: shouldAnimate = false }) {
 }
 
 export default function Projects() {
+  const navigate = useNavigate();
   const [showAll, setShowAll] = useState(false);
 
   return (
@@ -408,11 +518,13 @@ export default function Projects() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           viewport={{ once: true }}
+          onClick={() => navigate('/case/sangrakshan')}
           className="project-featured"
           style={{
             background: '#1A1A1A',
             marginBottom: '16px',
             overflow: 'hidden',
+            cursor: 'pointer',
           }}
         >
           <div
@@ -542,7 +654,7 @@ export default function Projects() {
                   letterSpacing: '0.06em',
                 }}
               >
-                ↗ {featured.impact}
+                {featured.impact}
               </div>
             </div>
           </div>
@@ -551,7 +663,12 @@ export default function Projects() {
         {/* Regular projects grid */}
         <div className="projects-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
           {projects.map((project, i) => (
-            <ProjectCard key={project.num} project={project} i={i} />
+            <ProjectCard
+              key={project.num}
+              project={project}
+              i={i}
+              onOpen={(p) => navigate(`/case/${p.slug || p.name.toLowerCase().replace(/[\s+]/g, '-')}`)}
+            />
           ))}
         </div>
 
@@ -594,7 +711,13 @@ export default function Projects() {
 
               <div className="projects-grid" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))' }}>
                 {hackathonProjects.map((project, i) => (
-                  <ProjectCard key={project.num} project={project} i={i} animate />
+                  <ProjectCard
+                    key={project.num}
+                    project={project}
+                    i={i}
+                    animate
+                    onOpen={(p) => navigate(`/case/${p.slug || p.name.toLowerCase().replace(/[\s+]/g, '-')}`)}
+                  />
                 ))}
               </div>
             </motion.div>
@@ -636,6 +759,7 @@ export default function Projects() {
           </motion.button>
         </motion.div>
       </div>
+
     </section>
   );
 }

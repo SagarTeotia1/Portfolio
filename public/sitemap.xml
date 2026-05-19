@@ -1,47 +1,200 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
+  <!-- ── Homepage ── -->
   <url>
     <loc>https://www.sagarteotia.in/</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
 
+  <!-- ── Homepage anchor sections ── -->
   <url>
     <loc>https://www.sagarteotia.in/#about</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/#recognition</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/#ventures</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
   </url>
 
   <url>
     <loc>https://www.sagarteotia.in/#experience</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sagarteotia.in/#projects</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
+    <priority>0.8</priority>
   </url>
 
   <url>
     <loc>https://www.sagarteotia.in/#stack</loc>
-    <lastmod>2026-05-16</lastmod>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/#contact</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Case Studies — Awards ── -->
+  <url>
+    <loc>https://www.sagarteotia.in/case/wgs-dubai-2025</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.95</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/Dubai/ME_HOLDING_WGS_TROPHY.jpg</image:loc>
+      <image:title>Sagar Teotia — Global Best M-Gov Award, World Government Summit Dubai 2025</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/Dubai/Dubai_main_award_pic.jpg</image:loc>
+      <image:title>World Government Summit 2025 — Dubai Award Ceremony</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/sih-national-winner</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/SIH2023/HACK_WINNING.jpg</image:loc>
+      <image:title>Smart India Hackathon 2023 — National Winner, Sangrakshan NDRF Platform</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/sih-ide-bootcamp</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/IDE%20BOOTCAMP/IDE_WINNING.jpg</image:loc>
+      <image:title>SIH IDE Bootcamp — Top Performing Idea, XR Labs</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/fishtank-pitchathon</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/FISHTANK/FISHTANK.jpg</image:loc>
+      <image:title>FishTank Pitchathon — Runner Up, Startup Sphere</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/hack4purpose-iit</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/IIT/IIT%20DELHI.jpg</image:loc>
+      <image:title>Hack4Purpose IIT Delhi — 1st Runner Up, Top 2 from 600+ Teams</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/bitbox-jiit</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/BitBox/BITBOX.jpg</image:loc>
+      <image:title>BITBOX 4.0 GDSC JIIT — Best All-Freshers Team Award</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/scale91-fintech</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/SCALE%2B91/SCALE%2B91.jpg</image:loc>
+      <image:title>Scale+91 Fintech Festival — Top 3 from 5000+ Teams</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/haryana-police-2024</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.65</priority>
+    <image:image>
+      <image:loc>https://pub-ef0d64d4483442089d9334d9dc46aff9.r2.dev/portfolio/HARYANA/HARYANA.jpg</image:loc>
+      <image:title>Haryana Police Hackathon 2024 — Top 10 Finalist</image:title>
+    </image:image>
+  </url>
+
+  <!-- ── Case Studies — Projects ── -->
+  <url>
+    <loc>https://www.sagarteotia.in/case/microkahani</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/campusmart</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
 
   <url>
-    <loc>https://www.sagarteotia.in/#contact</loc>
-    <lastmod>2026-05-16</lastmod>
+    <loc>https://www.sagarteotia.in/case/codespirit</loc>
+    <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/collegepaglu</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- ── Redirect slugs (included so crawlers discover and follow the canonical) ── -->
+  <url>
+    <loc>https://www.sagarteotia.in/case/sangrakshan</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <url>
+    <loc>https://www.sagarteotia.in/case/accessway</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

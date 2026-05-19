@@ -275,13 +275,13 @@ input, textarea {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 48px 32px 40px;
+  padding: 32px 32px 28px;
   min-height: 0;
 }
 
 @media (min-width: 1024px) {
   .hero-left {
-    padding: 56px 48px 48px;
+    padding: 32px 40px 28px;
     border-right: 2px solid #1A1A1A;
   }
 }
@@ -296,14 +296,14 @@ input, textarea {
   .hero-stats-panel {
     display: flex;
     flex-direction: column;
-    width: 240px;
+    width: 210px;
     flex-shrink: 0;
     border-top: none;
   }
 }
 
 .hero-stat-cell {
-  padding: 20px 24px;
+  padding: 14px 20px;
   border-bottom: 2px solid #1A1A1A;
   border-right: 2px solid #1A1A1A;
 }
@@ -320,11 +320,98 @@ input, textarea {
 }
 
 @media (min-width: 1024px) {
-  .hero-stat-cell:nth-child(even) {
-    border-right: none;
-  }
   .hero-stat-cell:last-child {
     border-bottom: none;
+  }
+}
+
+/* ── Hero photo frame ── */
+.hero-photo-frame {
+  position: relative;
+  overflow: hidden;
+  border-bottom: 2px solid #1A1A1A;
+  grid-column: 1 / -1;
+}
+
+@media (min-width: 1024px) {
+  .hero-photo-frame {
+    grid-column: unset;
+  }
+}
+
+.hero-photo-img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  object-position: center top;
+  display: block;
+  filter: contrast(1.04);
+  transition: transform 0.5s ease;
+}
+
+.hero-photo-frame:hover .hero-photo-img {
+  transform: scale(1.03);
+}
+
+@media (min-width: 1024px) {
+  .hero-photo-img {
+    height: 230px;
+  }
+}
+
+.hero-photo-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #1A1A1A;
+  color: #FAF8F2;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  padding: 7px 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Founder Gallery ── */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-item img {
+  transition: transform 0.45s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(26,26,26,0.93) 0%, rgba(26,26,26,0.15) 55%, transparent 100%);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 18px;
+  opacity: 0;
+  transition: opacity 0.22s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+@media (min-width: 600px) {
+  .gallery-item-large {
+    grid-column: span 2;
   }
 }
 
@@ -351,18 +438,18 @@ input, textarea {
   font-weight: 800;
   letter-spacing: -0.035em;
   line-height: 0.88;
-  font-size: clamp(4.5rem, 14vw, 11.5rem);
+  font-size: clamp(3rem, 12vw, 8rem);
 }
 
 @media (min-width: 1024px) {
   .hero-name {
-    font-size: clamp(4.5rem, 9vw, 10rem);
+    font-size: clamp(3rem, 6.5vw, 7rem);
   }
 }
 
 @media (min-width: 1280px) {
   .hero-name {
-    font-size: clamp(5rem, 9.5vw, 11rem);
+    font-size: clamp(3.5rem, 6.5vw, 7.5rem);
   }
 }
 
@@ -441,5 +528,84 @@ input, textarea {
   .section-mobile {
     padding-top: 64px !important;
     padding-bottom: 64px !important;
+  }
+}
+
+/* ── Global mobile fixes ── */
+@media (max-width: 767px) {
+  /* Prevent horizontal overflow */
+  body, #root {
+    overflow-x: hidden;
+  }
+
+  /* Section ghost numbers — smaller on mobile */
+  .section-ghost-num,
+  .section-ghost-num-light {
+    font-size: clamp(4rem, 22vw, 8rem);
+    right: -4px;
+    top: -16px;
+  }
+
+  /* Recognition grid — single col on small screens */
+  .recognition-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Projects grid — single col */
+  .projects-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  /* Brutal cards — reduce shadow on mobile (easier tap) */
+  .brutal-card {
+    box-shadow: 3px 3px 0 #1A1A1A;
+  }
+
+  /* Brutal btn — full width on very small screens */
+  .brutal-btn {
+    padding: 11px 20px;
+    font-size: 0.78rem;
+  }
+
+  /* Hero stats panel — 2x2 grid already, just shrink cells */
+  .hero-stat-cell {
+    padding: 12px 14px !important;
+  }
+
+  /* Marquee — slightly slower on mobile */
+  .marquee-track {
+    animation-duration: 22s;
+  }
+
+  /* Featured project card */
+  .project-featured {
+    box-shadow: 4px 4px 0 #1A1A1A;
+  }
+
+  /* Navbar overflow protection */
+  nav {
+    overflow-x: hidden;
+  }
+}
+
+@media (max-width: 479px) {
+  /* Tightest screens */
+  .section-label {
+    font-size: 0.62rem;
+  }
+
+  /* Reduce hero left padding further */
+  .hero-left {
+    padding: 20px 16px 16px !important;
+  }
+
+  .hero-top-bar,
+  .hero-bottom-bar {
+    padding: 10px 16px !important;
+  }
+
+  /* Recognition featured card */
+  .featured-pad {
+    padding: 20px 16px !important;
   }
 }
